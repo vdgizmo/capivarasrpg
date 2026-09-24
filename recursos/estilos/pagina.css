@@ -11,6 +11,8 @@ body {
     margin-inline: auto;
     align-items: center;
     justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
 }
     
 .botaoFofinho {
