@@ -5,6 +5,14 @@ body {
     line-height: 1.6;
 }
 
+.menuBarra {
+    display: flex;
+    flex-direction: row;
+    margin-inline: auto;
+    align-items: center;
+    justify-content: center;
+}
+    
 .botaoFofinho {
     background-color: #FFE3B8;
     border: 2px solid #000000;
