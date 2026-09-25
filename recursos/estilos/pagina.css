@@ -55,7 +55,7 @@ body {
     display: flex;
     flex-direction: column;
     /* max-width: fit-content; */
-    width: 93%;
+    width: 80%;
     border: solid 3px #422800;
     border-radius: 20px;
     padding: 14px;
