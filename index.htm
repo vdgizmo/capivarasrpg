@@ -42,11 +42,20 @@
                 <a href="./mestre/mestre_bestiario.htm">Bestiário</a>
             </div>
         </div>
+
+        <div id="navCenario" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaCenario()">&times;</a>
+            <div class="overlay-content">
+                <a href="./cenario/cenario_phantasia.htm">Breve história</a>
+                <a href="./cenario/cenario_locais.htm">Locais importantes</a>
+                <a href="./cenario/cenario_pessoas.htm">Pessoas notáveis</a>
+                <a href="./cenario/cenario_grupos.htm">Grupos influentes</a>
+                <a href="./cenario/cenario_mapa.htm">Mapa de Phantasia</a>
+            </div>
+        </div>
         
         <div class="menuBarra">
-            <a href="./cenario/cenario_phantasia.htm">
-                <button class="botaoFofinho-externo" role="button">Cenário</button>
-            </a>
+            <button class="botaoFofinho-externo" role="button" onclick="abreCenario()">Cenário</button>
             <button class="botaoFofinho-externo" role="button" onclick="abreJogador()">Jogador</button>
             <button class="botaoFofinho-externo" role="button" onclick="abreMestre()">Mestre</button>
             <a href="./recursos/ficha-rpg-cne.pdf">

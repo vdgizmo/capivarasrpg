@@ -1,0 +1,452 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../recursos/estilos/pagina.css">
+    <link rel="stylesheet" href="../recursos/estilos/texto.css">
+    <link rel="stylesheet" href="../recursos/estilos/topico.css">
+    <link rel="stylesheet" href="../recursos/estilos/menu_overlay.css">
+    <link rel="stylesheet" href="../recursos/estilos/imagens.css">
+    <link rel="stylesheet" href="../recursos/estilos/mapa.css">
+    <script src="../recursos/scripts/menu_overlay.js"></script>
+    <script src="../recursos/scripts/mapa.js"></script>
+
+    <title>Capivaras & Calabouços - Mapa de Phantasia</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: #111;
+        }
+
+        #viewport {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            touch-action: none;
+            cursor: grab;
+        }
+
+        #viewport.dragging {
+            cursor: grabbing;
+        }
+
+        #imagem {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: auto;
+            height: auto;
+            max-width: none;
+            max-height: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            transform-origin: 0 0;
+            will-change: transform;
+        }
+
+        #controles {
+            position: fixed;
+            left: 15px;
+            bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 10;
+        }
+
+        .grupo-zoom {
+            display: flex;
+            gap: 6px;
+        }
+
+        button,
+        .voltar {
+            width: 48px;
+            height: 44px;
+            border: 0;
+            border-radius: 40px;
+            background: rgba(107, 75, 53, 0.75);
+            color: white;
+            font-size: 22px;
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            box-shadow: 2px 2px 0px 0px #066674;
+        }
+
+        button:hover,
+        .voltar:hover {
+            background: rgba(50, 50, 50, 0.9);
+        }
+
+        .voltar {
+            width: 102px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="viewport">
+        <img id="imagem" src="../recursos/imagens/locais/mapa_phantasia.png" alt="Mapa de Phantasia">
+    </div>
+
+    <div id="controles">
+
+        <div class="grupo-zoom">
+            <button id="zoomMais" aria-label="Aumentar zoom">+</button>
+            <button id="zoomMenos" aria-label="Diminuir zoom">−</button>
+            <button id="zoomReset" aria-label="Restaurar zoom">⟳</button>
+        </div>
+
+        <a class="voltar" href="../cenario/cenario_locais.htm">Voltar</a>
+
+    </div>
+
+    <script>
+        const viewport = document.getElementById("viewport");
+        const imagem = document.getElementById("imagem");
+
+        const zoomMais = document.getElementById("zoomMais");
+        const zoomMenos = document.getElementById("zoomMenos");
+        const zoomReset = document.getElementById("zoomReset");
+
+        /*
+         * Escala:
+         * 1 = tamanho real da imagem
+         */
+        let escala = 1;
+
+        /*
+         * Posição da imagem.
+         */
+        let posX = 0;
+        let posY = 0;
+
+        /*
+         * Dados do arraste.
+         */
+        let arrastando = false;
+        let inicioX = 0;
+        let inicioY = 0;
+        let posicaoInicialX = 0;
+        let posicaoInicialY = 0;
+
+        /*
+         * Controle dos dedos na tela.
+         */
+        const ponteiros = new Map();
+
+        /*
+         * Dados da pinça.
+         */
+        let distanciaInicial = null;
+        let escalaInicial = 1;
+
+        /*
+         * Limites do zoom.
+         */
+        const ZOOM_MIN = 0.1;
+        const ZOOM_MAX = 8;
+
+        /*
+         * Aplica a transformação da imagem.
+         */
+        function atualizarImagem() {
+            imagem.style.transform =
+                `translate(${posX}px, ${posY}px) scale(${escala})`;
+        }
+
+        /*
+         * Mantém parte da imagem acessível e evita
+         * que ela desapareça completamente da tela.
+         */
+        function limitarPosicao() {
+            const largura = imagem.naturalWidth * escala;
+            const altura = imagem.naturalHeight * escala;
+
+            const vw = viewport.clientWidth;
+            const vh = viewport.clientHeight;
+
+            /*
+             * Permite arrastar livremente quando a imagem
+             * é maior que a área de visualização.
+             */
+            if (largura <= vw) {
+                posX = (vw - largura) / 2;
+            } else {
+                const limiteX = largura - 40;
+
+                posX = Math.min(40, posX);
+                posX = Math.max(vw - limiteX, posX);
+            }
+
+            if (altura <= vh) {
+                posY = (vh - altura) / 2;
+            } else {
+                const limiteY = altura - 40;
+
+                posY = Math.min(40, posY);
+                posY = Math.max(vh - limiteY, posY);
+            }
+        }
+
+        /*
+         * Restaura para o tamanho real.
+         */
+        function restaurar() {
+            escala = 1;
+
+            const largura = imagem.naturalWidth;
+            const altura = imagem.naturalHeight;
+
+            posX = (viewport.clientWidth - largura) / 2;
+            posY = (viewport.clientHeight - altura) / 2;
+
+            atualizarImagem();
+        }
+
+        /*
+         * Altera o zoom mantendo aproximadamente o
+         * centro da tela como ponto de referência.
+         */
+        function alterarZoom(novaEscala) {
+            const centroX = viewport.clientWidth / 2;
+            const centroY = viewport.clientHeight / 2;
+
+            const imagemX = (centroX - posX) / escala;
+            const imagemY = (centroY - posY) / escala;
+
+            escala = Math.max(
+                ZOOM_MIN,
+                Math.min(ZOOM_MAX, novaEscala)
+            );
+
+            posX = centroX - imagemX * escala;
+            posY = centroY - imagemY * escala;
+
+            limitarPosicao();
+            atualizarImagem();
+        }
+
+        /*
+         * Botões de zoom.
+         */
+        zoomMais.addEventListener("click", () => {
+            alterarZoom(escala * 1.25);
+        });
+
+        zoomMenos.addEventListener("click", () => {
+            alterarZoom(escala / 1.25);
+        });
+
+        zoomReset.addEventListener("click", () => {
+            restaurar();
+        });
+
+        /*
+         * Distância entre dois dedos.
+         */
+        function distanciaEntrePonteiros() {
+            const pontos = [...ponteiros.values()];
+
+            if (pontos.length < 2) {
+                return null;
+            }
+
+            const dx = pontos[0].x - pontos[1].x;
+            const dy = pontos[0].y - pontos[1].y;
+
+            return Math.sqrt(dx * dx + dy * dy);
+        }
+
+        /*
+         * Centro entre dois dedos.
+         */
+        function centroDosPonteiros() {
+            const pontos = [...ponteiros.values()];
+
+            return {
+                x: (pontos[0].x + pontos[1].x) / 2,
+                y: (pontos[0].y + pontos[1].y) / 2
+            };
+        }
+
+        /*
+         * Início do toque/arraste.
+         */
+        viewport.addEventListener("pointerdown", (evento) => {
+
+            ponteiros.set(evento.pointerId, {
+                x: evento.clientX,
+                y: evento.clientY
+            });
+
+            viewport.setPointerCapture(evento.pointerId);
+
+            if (ponteiros.size === 1) {
+
+                arrastando = true;
+
+                inicioX = evento.clientX;
+                inicioY = evento.clientY;
+
+                posicaoInicialX = posX;
+                posicaoInicialY = posY;
+
+                viewport.classList.add("dragging");
+            }
+
+            if (ponteiros.size === 2) {
+
+                arrastando = false;
+
+                distanciaInicial = distanciaEntrePonteiros();
+                escalaInicial = escala;
+            }
+        });
+
+        /*
+         * Movimento.
+         */
+        viewport.addEventListener("pointermove", (evento) => {
+
+            if (!ponteiros.has(evento.pointerId)) {
+                return;
+            }
+
+            ponteiros.set(evento.pointerId, {
+                x: evento.clientX,
+                y: evento.clientY
+            });
+
+            /*
+             * Pinça com dois dedos.
+             */
+            if (ponteiros.size >= 2) {
+
+                const distanciaAtual = distanciaEntrePonteiros();
+
+                if (distanciaInicial && distanciaAtual) {
+
+                    const fator =
+                        distanciaAtual / distanciaInicial;
+
+                    const novaEscala =
+                        escalaInicial * fator;
+
+                    const centro = centroDosPonteiros();
+
+                    /*
+                     * Coordenada da imagem sob o centro
+                     * dos dedos antes do zoom.
+                     */
+                    const imagemX =
+                        (centro.x - posX) / escala;
+
+                    const imagemY =
+                        (centro.y - posY) / escala;
+
+                    escala = Math.max(
+                        ZOOM_MIN,
+                        Math.min(ZOOM_MAX, novaEscala)
+                    );
+
+                    posX =
+                        centro.x - imagemX * escala;
+
+                    posY =
+                        centro.y - imagemY * escala;
+
+                    limitarPosicao();
+                    atualizarImagem();
+                }
+
+                return;
+            }
+
+            /*
+             * Arraste com um dedo.
+             */
+            if (arrastando && ponteiros.size === 1) {
+
+                posX =
+                    posicaoInicialX +
+                    (evento.clientX - inicioX);
+
+                posY =
+                    posicaoInicialY +
+                    (evento.clientY - inicioY);
+
+                limitarPosicao();
+                atualizarImagem();
+            }
+        });
+
+        /*
+         * Final do toque.
+         */
+        function finalizarPonteiro(evento) {
+
+            ponteiros.delete(evento.pointerId);
+
+            if (ponteiros.size < 2) {
+                distanciaInicial = null;
+            }
+
+            if (ponteiros.size === 0) {
+                arrastando = false;
+                viewport.classList.remove("dragging");
+            }
+        }
+
+        viewport.addEventListener(
+            "pointerup",
+            finalizarPonteiro
+        );
+
+        viewport.addEventListener(
+            "pointercancel",
+            finalizarPonteiro
+        );
+
+        viewport.addEventListener(
+            "pointerleave",
+            () => {}
+        );
+
+        /*
+         * Redimensionamento da janela.
+         */
+        window.addEventListener("resize", () => {
+            limitarPosicao();
+            atualizarImagem();
+        });
+
+        /*
+         * Quando a imagem terminar de carregar,
+         * posiciona-a inicialmente no centro.
+         */
+        imagem.addEventListener("load", () => {
+            restaurar();
+        });
+
+    </script>
+
+</body>
+</html>
