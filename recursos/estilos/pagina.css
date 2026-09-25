@@ -1,6 +1,6 @@
 body {
     /* background: #E7F1F2; */
-    background: #008983;
+    background: #00AEBE;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: clamp(1rem, 1.5vw + 0.8rem, 1.25rem);
     line-height: 1.6;
@@ -61,7 +61,7 @@ body {
     padding: 14px;
     margin-inline: auto;
     background: #ffffff;
-    box-shadow: 4px 4px 0 #E7F1F2;
+    box-shadow: 4px 4px 0 #066674;
 }
 
 .blocoBotao {
