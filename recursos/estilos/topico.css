@@ -63,7 +63,7 @@
 }
 
 .topico[open] .subtitulo::before {
-    content: "🐾";
+    content: "🐹";
     color: #d47777;
     transform: scale(1.1) rotate(-5deg);
 }
