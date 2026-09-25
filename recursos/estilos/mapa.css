@@ -1,1 +1,104 @@
-/* Está no próprio HTML. */
+#viewport {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    touch-action: none;
+    cursor: grab;
+    z-index: 1;
+}
+
+#viewport.dragging {
+    cursor: grabbing;
+}
+
+#imagem {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    transform-origin: 0 0;
+    will-change: transform;
+}
+
+#controlesMapa {
+    position: fixed;
+    left: 15px;
+    bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 10;
+}
+
+.grupoZoom {
+    display: flex;
+    gap: 6px;
+}
+
+.botaoZoom {
+    width: 48px;
+    height: 44px;
+    padding: 0;
+    border: 2px solid #000000;
+    border-radius: 30px;
+    background-color: #fff1d6;
+    color: #422800;
+    box-shadow: #422800 2px 2px 0 0;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.botaoZoom:hover {
+    background-color: #E7F1F2;
+}
+
+.botaoZoom:active {
+    box-shadow: #066674 1px 1px 0 0;
+    transform: translate(2px, 2px);
+}
+
+.botaoVoltarMapa {
+    width: 102px;
+    height: 44px;
+    padding: 0;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    background-color: #fff1d6;
+    color: #422800;
+    box-shadow: #422800 2px 2px 0 0;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.botaoVoltarMapa:hover {
+    background-color: #E7F1F2;
+}
+
+.botaoVoltarMapa:active {
+    box-shadow: #422800 1px 1px 0 0;
+    transform: translate(2px, 2px);
+}
