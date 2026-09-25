@@ -179,3 +179,36 @@ tr:nth-child(even) {
     border-radius: 50%;
     flex-shrink: 0;
 }
+
+.topico {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.topico .subtitulo {
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+}
+
+.topico .subtitulo::-webkit-details-marker {
+    display: none;
+}
+
+.topico .subtitulo::marker {
+    display: none;
+    content: "";
+}
+
+.topico .subtitulo::before {
+    content: "▶";
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 0.75em;
+    transition: transform 0.2s ease;
+}
+
+.topico[open] .subtitulo::before {
+    transform: rotate(90deg);
+}
