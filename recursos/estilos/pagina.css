@@ -212,3 +212,7 @@ tr:nth-child(even) {
 .topico[open] .subtitulo::before {
     transform: rotate(90deg);
 }
+
+.marca-texto {
+    padding: 0 4px;
+    background-color: #ffff00;
