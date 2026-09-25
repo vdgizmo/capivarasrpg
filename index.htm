@@ -4,12 +4,54 @@
         <link rel="stylesheet" href="./recursos/estilos/pagina.css">
         <link rel="stylesheet" href="./recursos/estilos/texto.css">
         <link rel="stylesheet" href="./recursos/estilos/topico.css">
+        <link rel="stylesheet" href="./recursos/estilos/menu_overlay.css">
+        <link rel="stylesheet" href="./recursos/estilos/imagens.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
+        <script src="./recursos/scripts/menu_overlay.js"></script>
+
         <div class="logo">
             <img src="./recursos/imagens/logo.png">
+        </div>
+
+        <div id="navJogador" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaJogador()">&times;</a>
+            <div class="overlay-content">
+                <a href="./jogador/jogador_index.htm">Olá, Jogador!</a>
+                <a href="./jogador/jogador_criando.htm">Criando e Ficha</a>
+                <a href="./jogador/jogador_especies.htm">Espécies</a>
+                <a href="./jogador/jogador_classes.htm">Classes</a>
+                <a href="./jogador/jogador_caracteristicas.htm">Características</a>
+                <a href="./jogador/jogador_vantagens.htm">Vantagens</a>
+                <a href="./jogador/jogador_desvantagens.htm">Desvantagens</a>
+                <a href="./jogador/jogador_habilidades.htm">Habilidades</a>
+                <a href="./jogador/jogador_grimorio.htm">Grimório</a>
+            </div>
+        </div>
+
+        <div id="navMestre" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaMestre()">&times;</a>
+            <div class="overlay-content">
+                <a href="./mestre/mestre_index.htm">Olá, Mestre!</a>
+                <a href="./mestre/mestre_conceitos.htm">Conceitos</a>
+                <a href="./mestre/mestre_preparacao.htm">Preparação</a>
+                <a href="./mestre/mestre_acordo.htm">Acordo social</a>
+                <a href="./mestre/mestre_mestrando.htm">Mestrando</a>
+                <a href="./mestre/mestre_bestiario.htm">Bestiário</a>
+            </div>
+        </div>
+        
+        <div class="menuBarra">
+            <a href="./cenario/cenario_phantasia.htm">
+                <button class="botaoFofinho-externo" role="button">Cenário</button>
+            </a>
+            <button class="botaoFofinho-externo" role="button" onclick="abreJogador()">Jogador</button>
+            <button class="botaoFofinho-externo" role="button" onclick="abreMestre()">Mestre</button>
+            <a href="./recursos/ficha-rpg-cne.pdf">
+                <button class="botaoFofinho-externo" role="button">Ficha</button>
+            </a>
         </div>
 
         <div id="conteudoPrincipal" class="conteudoPrincipal">
@@ -245,7 +287,7 @@
                     no botão aí embaixo.
                 </p>
                 <div class="blocoBotaoHome">
-                    <a href="./cenario/phantasia.htm">
+                    <a href="./cenario/cenario_phantasia.htm">
                         <button class="botaoFofinho" role="button">Phantasia</button>
                     </a>
                 </div>

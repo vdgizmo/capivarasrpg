@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <title>Capivaras & Calabouços - Locais importantes</title>
+        <link rel="stylesheet" href="../recursos/estilos/pagina.css">
+        <link rel="stylesheet" href="../recursos/estilos/texto.css">
+        <link rel="stylesheet" href="../recursos/estilos/topico.css">
+        <link rel="stylesheet" href="../recursos/estilos/menu_overlay.css">
+        <link rel="stylesheet" href="../recursos/estilos/imagens.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <script src="../recursos/scripts/menu_overlay.js"></script>
+
+        <div id="navJogador" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaJogador()">&times;</a>
+            <div class="overlay-content">
+                <a href="../jogador/jogador_index.htm">Olá, Jogador!</a>
+                <a href="../jogador/jogador_criando.htm">Criando e Ficha</a>
+                <a href="../jogador/jogador_especies.htm">Espécies</a>
+                <a href="../jogador/jogador_classes.htm">Classes</a>
+                <a href="../jogador/jogador_caracteristicas.htm">Características</a>
+                <a href="../jogador/jogador_vantagens.htm">Vantagens</a>
+                <a href="../jogador/jogador_desvantagens.htm">Desvantagens</a>
+                <a href="../jogador/jogador_habilidades.htm">Habilidades</a>
+                <a href="../jogador/jogador_grimorio.htm">Grimório</a>
+            </div>
+        </div>
+
+        <div id="navMestre" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaMestre()">&times;</a>
+            <div class="overlay-content">
+                <a href="../mestre/mestre_index.htm">Olá, Mestre!</a>
+                <a href="../mestre/mestre_conceitos.htm">Conceitos</a>
+                <a href="../mestre/mestre_preparacao.htm">Preparação</a>
+                <a href="../mestre/mestre_acordo.htm">Acordo social</a>
+                <a href="../mestre/mestre_mestrando.htm">Mestrando</a>
+                <a href="../mestre/mestre_bestiario.htm">Bestiário</a>
+            </div>
+        </div>
+
+        <div id="navCenario" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaCenario()">&times;</a>
+            <div class="overlay-content">
+                <a href="./cenario_phantasia.htm">Breve história</a>
+                <a href="./cenario_locais.htm">Locais importantes</a>
+                <a href="./cenario_pessoas.htm">Pessoas notáveis</a>
+                <a href="./cenario_grupos.htm">Grupos influentes</a>
+                <a href="./cenario_mapa.htm">Mapa de Phantasia</a>
+            </div>
+        </div>
+        
+        <div class="menuBarra">
+            <a href="../index.htm">
+                <button class="botaoFofinho-externo" role="button">Início</button>
+            </a>
+            <button class="botaoFofinho-externo" role="button" onclick="abreCenario()">Cenário</button>
+            <button class="botaoFofinho-externo" role="button" onclick="abreJogador()">Jogador</button>
+            <button class="botaoFofinho-externo" role="button" onclick="abreMestre()">Mestre</button>
+        </div>
+
+        <div id="conteudoPrincipal" class="conteudoPrincipal">
+            <img src="../recursos/imagens/cenario_3.png" class="imagem-cabecalho">
+            <div class="blocoConteudo">
+                <span class="titulo">Locais importantes</span>
+                <p>
+                    Phantasia é cheio de lugares a se explorar, alguns conhecidos, outros nem tanto, e alguns que alguém
+                    ainda precisa descobrir.
+                </p>
+
+                <!-- SEPARADOR -->
+
+                <div class="divider-container" role="separator">
+                    <div class="divider-line left"></div>
+                    <div class="divider-icon"></div>
+                    <div class="divider-line right"></div>
+                </div>
+
+                <span class="subtitulo-principal titulo-central">Mapa de Phantasia</span>
+                <div class="blocoBotaoHome">
+                    <a href="./cenario_mapa.htm">
+                        <button class="botaoFofinho-externo" role="button">Abrir</button>
+                    </a>
+                </div>
+
+                <!-- SEPARADOR -->
+
+                <div class="divider-container" role="separator">
+                    <div class="divider-line left"></div>
+                    <div class="divider-icon"></div>
+                    <div class="divider-line right"></div>
+                </div>
+
+                <details class="topico">
+                    <summary class="subtitulo">Castelo Cavalaria</summary>
+                    <!--- <img src="" class="imagem-cabecalho-interno"> --->
+                    <p>
+                        No coração de Phantasia ergue-se o imponente Castelo Cavalaria, residência da família real e símbolo máximo da 
+                        autoridade do reino. É de seus salões amplos, adornados com bandeiras e ecos de antigas vitórias, que decisões 
+                        moldam o destino de toda a nação, guiando seu povo entre tempos de prosperidade e incerteza. O castelo é cercado 
+                        por uma cidade ativa e moderna, onde negócios prosperam e mistérios são discutidos nas sombras. A maioria dos 
+                        grandes grupos de aventureiros está aqui quando não explorando, descansando entre um trabalho e outro.
+                    </p>
+                    <p>
+                        Ao redor do castelo floresceu uma cidade vibrante e em constante movimento, considerada a mais moderna de todo 
+                        o reino. Mercadores, artesãos e banqueiros fazem dela um centro de riqueza e inovação, onde oportunidades surgem 
+                        a cada esquina. No entanto, sob essa aparência próspera, existe uma camada mais obscura: becos silenciosos, 
+                        sociedades secretas e intrigas políticas que se desenrolam longe dos olhos do público. Não é por acaso que muitos 
+                        dos mais renomados grupos de aventureiros escolhem este lugar como base — aqui, contratos são fechados, rumores 
+                        circulam livremente e sempre há algo acontecendo, seja nas tavernas iluminadas ou nas sombras mais profundas.
+                    </p>
+                    <p>
+                        Ao redor da cidade ficam as fazendas do reino, terrenos férteis que garantem o sustento da capital, pontuadas 
+                        por moinhos, celeiros e pequenas comunidades rurais. Há uma pequena quantidade de vilas ao norte, nas estepes, 
+                        e a leste, nos pântanos.
+                    </p>
+                    <p>
+                        O porto mercantil do reino fica ao sul e é de onde saem todas as embarcações para outros continentes. Outros 
+                        povoados e cidades existem nos arredores.
+                    </p>
+                    <p>
+                        O rei e a rainha não são mais casados, mas governam juntos, respeitando mutuamente as decisões do 
+                        parceiro de governo. Alguns consideram isso um equilíbrio delicado (e eles realmente se estranham e brigam
+                        de vez em quando), mas tem funcionado bem pelos últimos 10 anos.
+                    </p>
+                    <img src="../recursos/imagens/castelo_cavalaria.png" class="imagem-texto">
+                </details>
+
+                <details class="topico">
+                    <summary class="subtitulo">Gothica</summary>
+                    <!--- <img src="" class="imagem-cabecalho-interno"> --->
+                    <p>
+                        A leste de Cavalaria ergue-se Gothica, uma cidade de silhueta marcante, construída no topo de um monte 
+                        escarpado cujas encostas são cobertas por trilhas sinuosas e antigos muros de contenção. De longe, suas torres 
+                        estreitas e templos de pedra escura parecem tocar o céu, envoltos quase sempre por névoas suaves que lhe 
+                        conferem um ar solene e enigmático.
+                    </p>
+                    <img src="../recursos/imagens/gothica.png" class="imagem-texto">
+                    <p>
+                        Após o isolamento do Monastério Plácido, Gothica ascendeu rapidamente como o principal centro religioso de Phantasia, 
+                        atraindo peregrinos, estudiosos e curiosos em busca de orientação espiritual ou respostas para inquietações mais profundas.
+                        Apesar de Phantasia nunca ter sido dominada por uma única fé, a cidade tornou-se palco de uma mudança sutil, porém 
+                        poderosa.
+                    </p>
+                    <p>
+                        Nos últimos anos, um líder religioso carismático conquistou influência crescente, unificando diferentes crenças 
+                        sob um discurso aparentemente conciliador. Muitos veem nisso uma nova era de ordem espiritual; outros, mais cautelosos, 
+                        sussurram que Gothica pode estar deixando de ser apenas um refúgio de fé para se tornar o epicentro de algo muito maior.
+                    </p>
+                </details>
+
+                <details class="topico">
+                    <summary class="subtitulo">Palácio de Mármore</summary>
+                    <!--- <img src="" class="imagem-cabecalho-interno"> --->
+                    <p>
+                        Erguida no lado oposto do Castelo Sinistro, a fortaleza nasceu como uma sentinela inabalável, projetada para vigiar 
+                        cada movimento vindo do sombrio domínio do lich.
+                    </p>
+                    <img src="../recursos/imagens/palacio_marmore.png" class="imagem-texto">
+                </details>
+
+            </div>
+        </div>
+    </body>
+</html>

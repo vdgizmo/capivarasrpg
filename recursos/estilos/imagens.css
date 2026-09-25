@@ -1,0 +1,42 @@
+.logo {
+    display: flex;
+    margin-inline: auto;
+    width: 40%;
+    align-content: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 400px;
+}
+
+.imagem-texto {
+    width: 95%;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+.imagem-cabecalho, .imagem-cabecalho-interno {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: -38px;
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        black 0%,
+        black 70%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to bottom,
+        black 0%,
+        black 70%,
+        transparent 100%
+    );
+}
+
+.imagem-cabecalho {
+    border-radius: 12px 12px 0 0;
+}

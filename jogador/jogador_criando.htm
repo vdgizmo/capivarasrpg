@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="../recursos/estilos/texto.css">
         <link rel="stylesheet" href="../recursos/estilos/topico.css">
         <link rel="stylesheet" href="../recursos/estilos/menu_overlay.css">
+        <link rel="stylesheet" href="../recursos/estilos/imagens.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
@@ -14,27 +15,43 @@
         <div id="navJogador" class="overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="fechaJogador()">&times;</a>
             <div class="overlay-content">
-                <a href="#">Criando</a>
-                <a href="#">Espécies</a>
-                <a href="#">Classes</a>
-                <a href="#">Características</a>
-                <a href="#">Vantagens</a>
-                <a href="#">Desvantagens</a>
-                <a href="#">Habilidades</a>
-                <a href="#">Grimório</a>
+                <a href="./jogador_index.htm">Olá, Jogador!</a>
+                <a href="./jogador_criando.htm">Criando e Ficha</a>
+                <a href="./jogador_especies.htm">Espécies</a>
+                <a href="./jogador_classes.htm">Classes</a>
+                <a href="./jogador_caracteristicas.htm">Características</a>
+                <a href="./jogador_vantagens.htm">Vantagens</a>
+                <a href="./jogador_desvantagens.htm">Desvantagens</a>
+                <a href="./jogador_habilidades.htm">Habilidades</a>
+                <a href="#./jogador_grimorio.htm">Grimório</a>
+            </div>
+        </div>
+
+        <div id="navMestre" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaMestre()">&times;</a>
+            <div class="overlay-content">
+                <a href="../mestre/mestre_index.htm">Olá, Mestre!</a>
+                <a href="../mestre/mestre_conceitos.htm">Conceitos</a>
+                <a href="../mestre/mestre_preparacao.htm">Preparação</a>
+                <a href="../mestre/mestre_acordo.htm">Acordo social</a>
+                <a href="../mestre/mestre_mestrando.htm">Mestrando</a>
+                <a href="../mestre/mestre_bestiario.htm">Bestiário</a>
             </div>
         </div>
         
         <div class="menuBarra">
             <a href="./jogador_index.htm">
-                <button class="botaoFofinho" role="button">Voltar</button>
+                <button class="botaoFofinho-externo" role="button">Voltar</button>
             </a>
-                <button class="botaoFofinho" role="button">Início</button>
-                <button class="botaoFofinho" role="button" onclick="abreJogador()">Jogador</button>
-                <button class="botaoFofinho" role="button">Mestre</button>
+            <a href="../index.htm">
+                <button class="botaoFofinho-externo" role="button">Início</button>
+            </a>
+                <button class="botaoFofinho-externo" role="button" onclick="abreJogador()">Jogador</button>
+                <button class="botaoFofinho-externo" role="button" onclick="abreMestre()">Mestre</button>
         </div>
         
         <div id="conteudoPrincipal" class="conteudoPrincipal">
+            <img src="../recursos/imagens/cabecalho_mestrando.png" class="imagem-cabecalho">
 
             <div class="blocoConteudo">
                 <span class="titulo">Criando seu personagem</span>
@@ -52,27 +69,166 @@
                     aprendeu a se transformar em rato e agora gosta de assustar as pessoas? Você pode ser tudo isso e qualquer coisa 
                     que imaginar.
                 </p>
+                <p>
+                    Consulte as páginas <a class="link-estrela" href="../jogador/jogador_interpretando.htm">Interpretando</a> e 
+                    <a class="link-estrela" href="../jogador/jogador_arquetipos.htm">Arquétipos</a> para mais dicas sobre interpretação 
+                    e <span class="textoItalico">roleplay.</span>
+                </p>
+                
+                <span class="subtitulo-ficha">A Ficha de Personagem</span>
+                <p>
+                    Depois de escolher quem você vai ser vamos preencher a <span class="textoNegrito">Ficha de Personagem</span>. Ela vai 
+                    guardar as informações sobre o que o seu personagem consegue fazer, seu estado atual e inventário. Essas informações 
+                    são importantes e você vai consultar sempre sua ficha para ver o que e como você consegue fazer.
+                </p>
+                <p>
+                    Você é livre para fazer sua ficha, mas há regras: ela mede o poder do personagem e esse poder tem um limite. Para 
+                    fazer seus heróis você recebe uma quantidade de pontos, e são esses pontos que vão “comprar” os poderes do personagem.
+                </p>
+                <p>
+                    Você vai receber <mark class="marca-texto">17 pontos</mark> para colocar nas características do seu personagem do jeito que você quiser, 
+                    comprar Vantagens e Habilidades.
+                </p>
+                <p>
+                    Você também vai ter um espaço para falar brevemente sobre ele, registrar seu inventário, grimório, habilidades, peculiaridades e história 
+                    de vida.
+                </p>
 
                 <details class="topico">
-                    <summary class="subtitulo">A Ficha de Personagem</summary>
+                    <summary class="subtitulo">Características</summary>
                     <p>
-                        Depois de escolher quem você vai ser vamos preencher a <span class="textoNegrito">Ficha de Personagem</span>. Ela vai 
-                        guardar as informações sobre o que o seu personagem consegue fazer, seu estado atual e inventário. Essas informações 
-                        são importantes e você vai consultar sempre sua ficha para ver o que e como você consegue fazer.
+                        As <span class="textoNegrito">Características</span> são informações importantes sobre seu personagem: os números que dizem como ele é. 
+                        Quanto mais altas, mais poderoso ele será. Elas variam de 0 a 5.
                     </p>
                     <p>
-                        Você é livre para fazer sua ficha, mas há regras: ela mede o poder do personagem e esse poder tem um limite. Para 
-                        fazer seus heróis você recebe uma quantidade de pontos, e são esses pontos que vão “comprar” os poderes do personagem.
+                        As Características são <span class="textoNegrito">Força</span>, <span class="textoNegrito">Inteligência</span>, 
+                        <span class="textoNegrito">Destreza</span>, <span class="textoNegrito">Resistência</span> e <span class="textoNegrito">Carisma</span>. 
+                        Pessoas medianas sempre tem 0 nessas Características, e 1 é o máximo para um humano normal. Qualquer número acima de 1 é considerado heroico.
                     </p>
                     <p>
-                        Você vai receber <mark class="marca-texto">17 pontos</mark> para colocar nas características do seu personagem do jeito que você quiser, comprar Vantagens e Habilidades.
+                        <span class="marca-texto">Cada ponto compra +1 em uma Característica na Ficha de Personagem</span>.
+                    </p>
+                </details>
+
+                <details class="topico">
+                    <summary class="subtitulo">Pontos de Vida (PV)</summary>
+                    <p>
+                        Os <span class="textoNegrito">Pontos de Vida</span>, ou <span class="textoNegrito">PV</span>, são a “energia” de um personagem. Quanto 
+                        mais pontos de vida ele tem mais difícil é derrotá-lo.
                     </p>
                     <p>
-                        Você também vai ter um espaço para falar brevemente sobre ele, registrar seu inventário, grimório, habilidades, peculiaridades e história 
-                        de vida.
+                        Para saber quantos PV o personagem tem, jogue um dado para cada ponto de Resistência que ele tem. Por exemplo, 
+                        se João tem 3 pontos de Resistência, ele joga três dados e soma os resultados. Se ele tirou 4, 5 e 3 ele vai ter 
+                        4+5+3 = 12 Pontos de Vida.
+                    </p>
+                    <p>
+                        Ele perde pontos a cada dano que levar e se chegar a 0 ele fica desmaiado até que algum amigo o ajude. Você 
+                        recupera PV descansando ou tomando uma poção.
+                    </p>
+                    <p>
+                        Se um personagem chega a -10, ele morreu. 👻
+                    </p>
+                </details>
+
+                <details class="topico">
+                    <summary class="subtitulo">Pontos de Magia (PM)</summary>
+                    <p>
+                        Os <span class="textoNegrito">Pontos de Magia</span>, ou <span class="textoNegrito">PM</span>, são o “combustível” 
+                        que seu personagem usa para usar uma magia. Um mago gasta PM para lançar uma magia, e recupera PM descansando 
+                        ou tomando uma poção.
+                    </p>
+                    <p>
+                        Todo personagem possui PM, mas nem todo personagem é um usuário de magia, ou vai ser capaz de usá-la. Esses pontos 
+                        não são exclusivos para magias, porém, e podem ser gastos em outras ações, como as concedidas por algumas Vantagens. 
+                        Nesses casos, podemos considerar que o personagem não usou de magia, mas de uma força de vontade enorme, ajuda do 
+                        destino, adrenalina ou energia vital do personagem.
+                    </p>
+                    <p>
+                        Cada personagem tem 2 + Inteligência PM. Se INT aumenta, Magia também.
+                    </p>
+                </details>
+
+                <details class="topico">
+                    <summary class="subtitulo">Vantagens e desvantagens</summary>
+                    <p>
+                        As <span class="textoNegrito">Vantagens</span> são como poderes especiais que cada personagem tem. Você compra 
+                        vantagens com os pontos que usa nas Características do personagem. Em vez de gastar tudo nelas, você pode guardar 
+                        um ou dois para ter uma vantagem, como um Ataque Especial. <span class="marca-texto">Você pode comprar no máximo 3 vantagens.</span>
+                    </p>
+                    <p>
+                        As <span class="textoNegrito">Desvantagens</span> são suas fraquezas, coisas que te atrapalham. Uma desvantagem te 
+                        dá um ponto, que você pode gastar para ter uma característica mais forte, ou para ter uma vantagem.
+                    </p>
+                    <p>
+                        Você pode ter no máximo 3 desvantagens, mas lembre-se: elas te atrapalham. <span class="marca-texto">E tudo bem, ninguém é 
+                        perfeito</span>! Um bom personagem tem qualidades e defeitos que o tornam interessante.
+                    </p>
+                    <p>
+                        Pode acontecer que durante a aventura você encontre um anel mágico com o poder de dar uma vantagem. Assim você consegue 
+                        uma vantagem aleatória, que o Mestre vai escolher, que pode ser útil ou não – e não precisa gastar pontos. 
+                        Também pode ser que você perca uma vantagem. Um vilão pode usar uma magia que suga poderes, por exemplo. Você não 
+                        recebe de volta os pontos que gastou na vantagem perdida.
+                    </p>
+                    <p>
+                        É claro que você também pode ganhar uma desvantagem, gostando disso ou não! Se estragou os planos de um vilão ele 
+                        pode se tornar seu inimigo, ou um fantasma pode começar a assombrar você. E isso não te dá pontos para gastar. 
+                        Mas calma: você também pode perder uma desvantagem, com muito tempo e esforço, ou um mago bondoso usar sua magia 
+                        para ajudar. Tudo pode acontecer.
                     </p>
                 </details>
                 
+                <details class="topico">
+                    <summary class="subtitulo">Habilidades</summary>
+                    <p>
+                        <span class="textoNegrito">Habilidade</span> é um conhecimento do seu personagem, alguma coisa que ele sabe fazer 
+                        bem. Por exemplo, um personagem que tem a habilidade Medicina consegue cuidar dos ferimentos do grupo e ajudar pessoas 
+                        feridas, identificar doenças, recomendar remédios, parar um sangramento e assim por diante.
+                    </p>
+                </details>
+
+                <details class="topico">
+                    <summary class="subtitulo">Magias</summary>
+                    <p>
+                        A magia é um tipo de poder diferente, que gasta energia para ser usada: os Pontos de Magia. Se você ficar sem 
+                        PM não vai poder usar magias até descansar ou tomar uma poção. A critério do Mestre e usando um teste, usar 
+                        uma magia tendo PM insuficientes pode drenar PV.
+                    </p>
+                    <p>
+                        Dependendo da sua história, um personagem começa a aventura conhecendo algumas magias <span class="marca-texto">(até 4)</span>.
+                        No decorrer  da aventura ele pode aprender novas magias por diversos meios.
+                    </p>
+                </details>
+
+                <details class="topico">
+                    <summary class="subtitulo">Mochila (e seu inventário)</summary>
+                    <p>
+                        Os personagens carregam suas coisas em uma mochila ou itens parecidos de carga. Você pode ter um número limitado de coisas, 
+                        e o Mestre pode dizer quando você já está carregando peso ou coisas demais.
+                    </p>
+                    <p>
+                        Você pode começar o jogo com no máximo 6 itens, com a aprovação do Mestre.
+                    </p>
+                </details>
+
+                <!-- SEPARADOR -->
+
+                <div class="divider-container" role="separator">
+                    <div class="divider-line-marrom left"></div>
+                    <div class="divider-icon-marrom"></div>
+                    <div class="divider-line-marrom right"></div>
+                </div>
+
+                <p>
+                        Abaixo você pode fazer o download da ficha em PDF ou abrir a ficha preenchível online.
+                </p>
+                <div class="blocoBotaoHome">
+                    <a href="./recursos/ficha-rpg-cne.pdf">
+                        <button class="botaoFofinho" role="button">Download</button>
+                    </a>
+                    <a href="./recursos/ficha_personagem.htm">
+                        <button class="botaoFofinho" role="button">Preencher</button>
+                    </a>
+                </div>
             </div>
         </div>
     </body>
