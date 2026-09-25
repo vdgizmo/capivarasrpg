@@ -8,13 +8,27 @@
     </head>
 
     <body>
+        <div id="navJogador" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaJogador()">&times;</a>
+            <div class="overlay-content">
+                <a href="#">Criando</a>
+                <a href="#">Espécies</a>
+                <a href="#">Classes</a>
+                <a href="#">Características</a>
+                <a href="#">Vantagens</a>
+                <a href="#">Desvantagens</a>
+                <a href="#">Habilidades</a>
+                <a href="#">Grimório</a>
+            </div>
+        </div>
+        
         <div class="menuBarra">
             <a href="./jogador_index.htm">
                 <button class="botaoFofinho" role="button">Voltar</button>
-                <button class="botaoFofinho" role="button">Início</button>
-                <button class="botaoFofinho" role="button">Jogador</button>
-                <button class="botaoFofinho" role="button">Mestre</button>
             </a>
+                <button class="botaoFofinho" role="button">Início</button>
+                <button class="botaoFofinho" role="button" onclick="abreJogador()">Jogador</button>
+                <button class="botaoFofinho" role="button">Mestre</button>
         </div>
         
         <div id="conteudoPrincipal" class="conteudoPrincipal">
