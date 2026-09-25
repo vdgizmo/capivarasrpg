@@ -20,7 +20,7 @@ body {
     background-color: #fff1d6;
     border: 2px solid #000000;
     border-radius: 20px;
-    box-shadow: #066674 0 4px 0 0;
+    box-shadow: #066674 4px 4px 0 0;
     color: #422800;
     cursor: pointer;
     display: inline-block;
