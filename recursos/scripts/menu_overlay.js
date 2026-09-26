@@ -29,3 +29,11 @@ function abreRegras() {
 function fechaRegras() {
   document.getElementById("navRegras").style.height = "0%";
 }
+
+function abreInterpretando() {
+  document.getElementById("navInterpretando").style.height = "100%";
+}
+
+function fechaInterpretando() {
+  document.getElementById("navInterpretando").style.height = "0%";
+}
