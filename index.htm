@@ -53,13 +53,41 @@
                 <a href="./cenario/cenario_mapa.htm">Mapa de Phantasia</a>
             </div>
         </div>
+
+        <div id="navRegras" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaRegras()">&times;</a>
+            <div class="overlay-content">
+                <a href="./regras/regras_gerais.htm">Regras gerais</a>
+                <a href="./regras/regras_combate.htm">Combate</a>
+                <a href="./regras/regras_magia.htm">Magia</a>
+            </div>
+        </div>
         
         <div class="menuBarra">
-            <button class="botaoFofinho-externo" role="button" onclick="abreCenario()">Cenário</button>
-            <button class="botaoFofinho-externo" role="button" onclick="abreJogador()">Jogador</button>
-            <button class="botaoFofinho-externo" role="button" onclick="abreMestre()">Mestre</button>
+            <button class="botaoIcone" role="button" onclick="abreCenario()" title="Cenário">
+                <img src="./recursos/imagens/icones/icone_cenario.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreJogador()" title="Jogador">
+                <img src="./recursos/imagens/icones/icone_jogador.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreRegras()" title="Regras">
+                    <img src="./recursos/imagens/icones/icone_regras.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreMestre()" title="Mestre">
+                <img src="./recursos/imagens/icones/icone_mestre.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreInterpretando()" title="Interpretando">
+                <img src="./recursos/imagens/icones/icone_interpretando.gif" class="icone-menu">
+            </button>
+            
             <a href="./recursos/ficha-rpg-cne.pdf">
-                <button class="botaoFofinho-externo" role="button">Ficha</button>
+                <button class="botaoIcone" role="button" title="Ficha">
+                    <img src="./recursos/imagens/icones/icone_ficha.gif" class="icone-menu">
+                </button>
             </a>
         </div>
 

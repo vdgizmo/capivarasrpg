@@ -14,10 +14,10 @@
 
 .overlay-content {
   position: relative;
-  top: 10%;
+  top: 6%;
   width: 100%;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .overlay a {
@@ -35,9 +35,10 @@
 
 .overlay .closebtn {
   position: absolute;
-  top: 20px;
-  right: 45px;
+  top: 5px;
+  right: 40px;
   font-size: 60px;
+  color: #dc143c;
 }
 
 @media screen and (max-height: 450px) {

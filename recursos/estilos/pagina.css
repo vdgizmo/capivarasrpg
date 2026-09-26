@@ -21,7 +21,12 @@ body {
     align-items: center;
     justify-content: center;
     gap: 6px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-inline: auto;
+    padding: 0 6px;
 }
     
 .botaoFofinho, .botaoFofinho-externo {
@@ -44,11 +49,11 @@ body {
 }
 
 .botaoFofinho {
-    box-shadow: #066674 4px 4px 0 0;
+    box-shadow: #066674 0 3px 0 0;
 }
 
 .botaoFofinho-externo {
-    box-shadow: #422800 4px 4px 0 0;
+    box-shadow: #422800 0 3px 0 0;
 }
 
 .botaoFofinho:hover, .botaoFofinho-externo:hover {
@@ -56,7 +61,7 @@ body {
 }
 
 .botaoFofinho:active, .botaoFofinho-externo:active {
-    box-shadow: #066674 2px 2px 0 0;
+    box-shadow: #066674 0 2px 0 0;
     transform: translate(2px, 2px);
 }
 

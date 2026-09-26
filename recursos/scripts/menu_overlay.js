@@ -21,3 +21,11 @@ function abreCenario() {
 function fechaCenario() {
   document.getElementById("navCenario").style.height = "0%";
 }
+
+function abreRegras() {
+  document.getElementById("navRegras").style.height = "100%";
+}
+
+function fechaRegras() {
+  document.getElementById("navRegras").style.height = "0%";
+}

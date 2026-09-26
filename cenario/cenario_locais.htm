@@ -50,13 +50,37 @@
             </div>
         </div>
         
+        <div id="navRegras" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaRegras()">&times;</a>
+            <div class="overlay-content">
+                <a href="../regras/regras_gerais.htm">Regras gerais</a>
+                <a href="../regras/regras_combate.htm">Combate</a>
+                <a href="../regras/regras_magia.htm">Magia</a>
+            </div>
+        </div>
+        
         <div class="menuBarra">
             <a href="../index.htm">
-                <button class="botaoFofinho-externo" role="button">Início</button>
+                <button class="botaoIcone" role="button" title="Início">
+                    <img src="../recursos/imagens/icones/icone_inicio.gif" class="icone-menu">
+                </button>
             </a>
-            <button class="botaoFofinho-externo" role="button" onclick="abreCenario()">Cenário</button>
-            <button class="botaoFofinho-externo" role="button" onclick="abreJogador()">Jogador</button>
-            <button class="botaoFofinho-externo" role="button" onclick="abreMestre()">Mestre</button>
+
+            <button class="botaoIcone" role="button" onclick="abreCenario()" title="Cenário">
+                <img src="../recursos/imagens/icones/icone_cenario.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreJogador()" title="Jogador">
+                <img src="../recursos/imagens/icones/icone_jogador.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" title="Regras" onclick="abreRegras()">
+                <img src="../recursos/imagens/icones/icone_regras.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreMestre()" title="Mestre">
+                <img src="../recursos/imagens/icones/icone_mestre.gif" class="icone-menu">
+            </button>
         </div>
 
         <div id="conteudoPrincipal" class="conteudoPrincipal">
