@@ -66,8 +66,8 @@
 
 .topico-personagem summary img {
     display: block;
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     object-fit: contain;
     margin: 0 auto 10px;
 }
