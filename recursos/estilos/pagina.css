@@ -76,13 +76,14 @@ body {
     display: flex;
     flex-direction: column;
     /* max-width: fit-content; */
-    width: 90%;
+    width: 98%;
     border: solid 3px #422800;
     border-radius: 20px;
     padding: 14px;
     margin-inline: auto;
     background: #ffffff;
     box-shadow: 4px 4px 0 #066674;
+    box-sizing: border-box;
 }
 
 /* .blocoBotao {

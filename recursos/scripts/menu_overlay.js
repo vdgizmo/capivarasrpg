@@ -37,3 +37,27 @@ function abreInterpretando() {
 function fechaInterpretando() {
   document.getElementById("navInterpretando").style.height = "0%";
 }
+
+// FECHAR TÓPICOS NOS MENUS INTERNOS
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.fechar-topico').forEach(function (botao) {
+        botao.addEventListener('click', function () {
+            const details = this.closest('.topico');
+            if (details) {
+                details.removeAttribute('open');
+            }
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.fechar-topico').forEach(function (botao) {
+        botao.addEventListener('click', function () {
+            const details = this.closest('.topico-personagem');
+            if (details) {
+                details.removeAttribute('open');
+            }
+        });
+    });
+});

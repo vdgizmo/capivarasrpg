@@ -1,3 +1,4 @@
+// ----
 const viewport = document.getElementById("viewport");
 const imagem = document.getElementById("imagem");
 

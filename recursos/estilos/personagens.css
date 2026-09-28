@@ -1,0 +1,83 @@
+.blocoPersonagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.blocoPersonagens:has(details[open]) > *:not(details[open]) {
+    display: none;
+}
+
+.blocoPersonagens > details[open] {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+.blocoPersonagens > * {
+    min-width: 0;
+    flex-shrink: 1;
+}
+
+.topico-personagem {
+    width: 100%;
+    border: 2px solid #d8b98c;
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow:
+        0 4px 0 #ead7b8,
+        0 7px 12px rgba(120, 90, 50, 0.10);
+    overflow: hidden;
+    transition:
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+    min-height: 28px;
+    box-sizing: border-box;
+}
+
+.topico-personagem p {
+    padding: 14px 18px;
+}
+
+.blocoPersonagens .subtitulo {
+    color: #6b4b35;
+}
+
+.topico-personagem img {
+    border-radius: 10px;
+}
+
+.topico-personagem summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+    padding: 15px;
+}
+
+.topico-personagem summary::-webkit-details-marker {
+    display: none;
+}
+
+.topico-personagem summary img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin: 0 auto 10px;
+}
+
+.topico-personagem summary span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .blocoPersonagens {
+        grid-template-columns: 1fr;
+    }
+}

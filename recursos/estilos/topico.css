@@ -116,3 +116,23 @@
         margin-right: 14px;
     }
 }
+
+.fechar-topico {
+    display: block;
+    margin: 10px auto 20px;
+    padding: 8px 18px;
+    border: 1px solid #d3a875;
+    border-radius: 20px;
+    background: #fff1d6;
+    color: #6b4b35;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.fechar-topico:hover {
+    background: #ffe8c2;
+}

@@ -1,0 +1,172 @@
+<html>
+    <head>
+        <title>Capivaras & Calabouços - Locais importantes</title>
+        <link rel="stylesheet" href="../recursos/estilos/pagina.css">
+        <link rel="stylesheet" href="../recursos/estilos/texto.css">
+        <link rel="stylesheet" href="../recursos/estilos/topico.css">
+        <link rel="stylesheet" href="../recursos/estilos/menu_overlay.css">
+        <link rel="stylesheet" href="../recursos/estilos/imagens.css">
+        <link rel="stylesheet" href="../recursos/estilos/personagens.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <script src="../recursos/scripts/menu_overlay.js"></script>
+
+        <div id="navJogador" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaJogador()">&times;</a>
+            <div class="overlay-content">
+                <a href="../jogador/jogador_index.htm">Olá, Jogador!</a>
+                <a href="../jogador/jogador_criando.htm">Criando e Ficha</a>
+                <a href="../jogador/jogador_especies.htm">Espécies</a>
+                <a href="../jogador/jogador_classes.htm">Classes</a>
+                <a href="../jogador/jogador_caracteristicas.htm">Características</a>
+                <a href="../jogador/jogador_vantagens.htm">Vantagens</a>
+                <a href="../jogador/jogador_desvantagens.htm">Desvantagens</a>
+                <a href="../jogador/jogador_habilidades.htm">Habilidades</a>
+                <a href="../jogador/jogador_grimorio.htm">Grimório</a>
+            </div>
+        </div>
+
+        <div id="navMestre" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaMestre()">&times;</a>
+            <div class="overlay-content">
+                <a href="../mestre/mestre_index.htm">Olá, Mestre!</a>
+                <a href="../mestre/mestre_conceitos.htm">Conceitos</a>
+                <a href="../mestre/mestre_preparacao.htm">Preparação</a>
+                <a href="../mestre/mestre_acordo.htm">Acordo social</a>
+                <a href="../mestre/mestre_mestrando.htm">Mestrando</a>
+                <a href="../mestre/mestre_bestiario.htm">Bestiário</a>
+            </div>
+        </div>
+
+        <div id="navCenario" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaCenario()">&times;</a>
+            <div class="overlay-content">
+                <a href="./cenario_phantasia.htm">Breve história</a>
+                <a href="./cenario_locais.htm">Locais importantes</a>
+                <a href="./cenario_pessoas.htm">Pessoas notáveis</a>
+                <a href="./cenario_grupos.htm">Grupos influentes</a>
+                <a href="./cenario_mapa.htm">Mapa de Phantasia</a>
+            </div>
+        </div>
+        
+        <div id="navRegras" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaRegras()">&times;</a>
+            <div class="overlay-content">
+                <a href="../regras/regras_gerais.htm">Regras gerais</a>
+                <a href="../regras/regras_combate.htm">Combate</a>
+                <a href="../regras/regras_magia.htm">Magia</a>
+            </div>
+        </div>
+
+        <div id="navInterpretando" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaInterpretando()">&times;</a>
+            <div class="overlay-content">
+                <a href="../interpretando/interpretando_index.htm">Interpretando</a>
+                <a href="../interpretando/interpretando_arquetipos.htm">Arquétipos</a>
+                <a href="../interpretando/interpretando_ficha.htm">Ficha de Personagem</a>
+            </div>
+        </div>
+        
+        <div class="menuBarra">
+            <a href="../index.htm">
+                <button class="botaoIcone" role="button" title="Início">
+                    <img src="../recursos/imagens/icones/icone_inicio.gif" class="icone-menu">
+                </button>
+            </a>
+
+            <button class="botaoIcone" role="button" onclick="abreCenario()" title="Cenário">
+                <img src="../recursos/imagens/icones/icone_cenario.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreJogador()" title="Jogador">
+                <img src="../recursos/imagens/icones/icone_jogador.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" title="Regras" onclick="abreRegras()">
+                <img src="../recursos/imagens/icones/icone_regras.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreMestre()" title="Mestre">
+                <img src="../recursos/imagens/icones/icone_mestre.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreInterpretando()" title="Interpretando">
+                <img src="../recursos/imagens/icones/icone_interpretando.gif" class="icone-menu">
+            </button>
+        </div>
+
+        <div id="conteudoPrincipal" class="conteudoPrincipal">
+            <img src="../recursos/imagens/cabecalho_pessoas.png" class="imagem-cabecalho">
+            <div class="blocoConteudo">
+                <span class="titulo">Pessoas notáveis</span>
+
+                <div class="blocoPersonagens">
+                    <details class="topico-personagem">
+                        <summary class="subtitulo">
+                            <img src="../recursos/imagens/personagens/vede_flechaleve.png">
+                            <span>Vede Flechaleve</span>
+                        </summary>
+                        <p>
+                            Atual Rei de Phantasia, Vede Flechaleve é um humano cuja presença combina autoridade natural com uma mente afiada e inquieta. 
+                            Herdeiro de uma linhagem marcada por liderança e desafios constantes, Vede não se destacou apenas por direito de sangue, mas 
+                            por mérito próprio. Desde jovem demonstrou uma inteligência incomum, aliada a uma curiosidade insaciável, especialmente no 
+                            que diz respeito às artes arcanas. Com o tempo, tornou-se não apenas um governante capaz, mas também um dos mais notáveis 
+                            feiticeiros de todo o Reinado.
+                        </p>
+                        <p>
+                            Nos bastidores, há rumores de que o rei se envolve diretamente em estudos e projetos que poucos compreendem completamente. 
+                            Vede Flechaleve II não é apenas um rei que governa seu tempo, é alguém que parece se preparar para o que ainda está por vir.
+                        </p>
+                        <button type="button" class="fechar-topico">Fechar tópico</button>
+                    </details>
+
+                    <details class="topico-personagem">
+                        <summary class="subtitulo">
+                            <img src="../recursos/imagens/personagens/jackln_faye.png">
+                            <span>Jak’Ln Fäye</span>
+                        </summary>
+                        <p>
+                            Rainha de Phantasia, Jak’Ln é uma elfa cuja presença é tão cativante quanto estratégica. Dotada de uma beleza marcante e de 
+                            um carisma quase sobrenatural, ela domina a arte da diplomacia com naturalidade impressionante. Em salões políticos, encontros 
+                            formais ou conversas casuais, sua habilidade de conduzir diálogos e influenciar decisões faz com que poucos sequer percebam 
+                            quando já foram convencidos. Ela é o coração social do Reinado.
+                        </p>
+                        <p>
+                            Por trás de sua aparência graciosa, no entanto, existe uma mente extremamente calculista e atenta. Jak’Ln compreende pessoas 
+                            com profundidade, identificando motivações, medos e desejos de forma inquietante. Sua influência se estende por cortes e 
+                            conselhos, tornando-a uma peça essencial na manutenção do equilíbrio político do reino.
+                        </p>
+                        <button type="button" class="fechar-topico">Fechar tópico</button>
+                    </details>
+
+                    <details class="topico-personagem">
+                        <summary class="subtitulo">
+                            <img src="../recursos/imagens/personagens/yasmin_flechaleve.png">
+                            <span>Yasmin Fäye Flechaleve</span>
+                        </summary>
+                        <p>
+                            Princesa de Phantasia, Yasmin Fäye Flechaleve carrega em si o peso e o potencial de uma linhagem extraordinária. Filha 
+                            do rei Vede Flechaleve e da rainha Jak’Ln Fäye, e descendente direta de Marco I, ela representa a união entre diferentes 
+                            tradições do Reinado: a liderança humana, a sutileza élfica e a herança histórica que moldou Phantasia. Ainda jovem, 
+                            Yasmin já se destacou como uma poderosa druida, profundamente conectada à natureza e às forças primordiais do mundo. 
+                            Sua magia é viva, instintiva e, muitas vezes, imprevisível — mais próxima do fluxo natural da vida do que das estruturas 
+                            rígidas da magia arcana.
+                        </p>
+                        <p>
+                            Yasmin é frequentemente vista longe dos salões reais, explorando florestas, campos e regiões selvagens do reino. Ao seu lado 
+                            estão seus companheiros inseparáveis: Fun, uma cadela gigante de lealdade inabalável; Tigra, uma gata mágica de comportamento 
+                            enigmático e inteligência aguçada; e Gwen, um raro e majestoso unicórnio, cuja presença por si só já é considerada um presságio 
+                            de algo maior. Juntos, formam um vínculo que vai além da simples companhia, refletindo a profunda conexão da princesa com todas 
+                            as formas de vida.
+                        </p>
+                        <button type="button" class="fechar-topico">Fechar tópico</button>
+                    </details>
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
