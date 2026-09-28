@@ -36,16 +36,18 @@
 }
 
 .topico-personagem p {
-    padding: 14px 18px;
+    padding: 0 14px 0 14px;
 }
 
 .blocoPersonagens .subtitulo {
     color: #6b4b35;
 }
 
+/*
 .topico-personagem img {
     border-radius: 10px;
 }
+    */
 
 .topico-personagem summary {
     display: flex;
@@ -64,8 +66,8 @@
 
 .topico-personagem summary img {
     display: block;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
     margin: 0 auto 10px;
 }
@@ -78,6 +80,7 @@
 
 @media (max-width: 700px) {
     .blocoPersonagens {
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr; */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
