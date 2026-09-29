@@ -14,6 +14,12 @@ body {
     line-height: 1.6;
 }
 
+body p {
+    text-align: justify;
+    hyphens: auto;
+    overflow-wrap: break-word;
+}
+
 .menuBarra {
     display: flex;
     flex-direction: row;
@@ -83,6 +89,17 @@ body {
     margin-inline: auto;
     background: #ffffff;
     box-shadow: 4px 4px 0 #066674;
+    box-sizing: border-box;
+}
+
+.citacao {
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    padding: 11px;
+    margin-inline: auto;
+   /* background: #E7F1F2; */
+    box-shadow: 3px 0 0 0 #066674 inset;
     box-sizing: border-box;
 }
 

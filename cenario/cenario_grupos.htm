@@ -1,0 +1,160 @@
+<html lang="pt-BR">
+    <head>
+        <title>Capivaras & Calabouços - Grupos Influentes</title>
+        <link rel="stylesheet" href="../recursos/estilos/pagina.css">
+        <link rel="stylesheet" href="../recursos/estilos/texto.css">
+        <link rel="stylesheet" href="../recursos/estilos/topico.css">
+        <link rel="stylesheet" href="../recursos/estilos/menu_overlay.css">
+        <link rel="stylesheet" href="../recursos/estilos/imagens.css">
+        <link rel="stylesheet" href="../recursos/estilos/personagens.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <script src="../recursos/scripts/menu_overlay.js"></script>
+
+        <div id="navJogador" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaJogador()">&times;</a>
+            <div class="overlay-content">
+                <a href="../jogador/jogador_index.htm">Olá, Jogador!</a>
+                <a href="../jogador/jogador_criando.htm">Criando e Ficha</a>
+                <a href="../jogador/jogador_especies.htm">Espécies</a>
+                <a href="../jogador/jogador_classes.htm">Classes</a>
+                <a href="../jogador/jogador_caracteristicas.htm">Características</a>
+                <a href="../jogador/jogador_vantagens.htm">Vantagens</a>
+                <a href="../jogador/jogador_desvantagens.htm">Desvantagens</a>
+                <a href="../jogador/jogador_habilidades.htm">Habilidades</a>
+                <a href="../jogador/jogador_grimorio.htm">Grimório</a>
+            </div>
+        </div>
+
+        <div id="navMestre" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaMestre()">&times;</a>
+            <div class="overlay-content">
+                <a href="../mestre/mestre_index.htm">Olá, Mestre!</a>
+                <a href="../mestre/mestre_conceitos.htm">Conceitos</a>
+                <a href="../mestre/mestre_preparacao.htm">Preparação</a>
+                <a href="../mestre/mestre_acordo.htm">Acordo social</a>
+                <a href="../mestre/mestre_mestrando.htm">Mestrando</a>
+                <a href="../mestre/mestre_bestiario.htm">Bestiário</a>
+            </div>
+        </div>
+
+        <div id="navCenario" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaCenario()">&times;</a>
+            <div class="overlay-content">
+                <a href="./cenario_phantasia.htm">Breve história</a>
+                <a href="./cenario_locais.htm">Locais importantes</a>
+                <a href="./cenario_pessoas.htm">Pessoas notáveis</a>
+                <a href="./cenario_grupos.htm">Grupos influentes</a>
+                <a href="./cenario_mapa.htm">Mapa de Phantasia</a>
+            </div>
+        </div>
+        
+        <div id="navRegras" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaRegras()">&times;</a>
+            <div class="overlay-content">
+                <a href="../regras/regras_gerais.htm">Regras gerais</a>
+                <a href="../regras/regras_combate.htm">Combate</a>
+                <a href="../regras/regras_magia.htm">Magia</a>
+            </div>
+        </div>
+
+        <div id="navInterpretando" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaInterpretando()">&times;</a>
+            <div class="overlay-content">
+                <a href="../interpretando/interpretando_index.htm">Interpretando</a>
+                <a href="../interpretando/interpretando_arquetipos.htm">Arquétipos</a>
+                <a href="../interpretando/interpretando_ficha.htm">Ficha de Personagem</a>
+            </div>
+        </div>
+        
+        <div class="menuBarra">
+            <a href="../index.htm">
+                <button class="botaoIcone" role="button" title="Início">
+                    <img src="../recursos/imagens/icones/icone_inicio.gif" class="icone-menu">
+                </button>
+            </a>
+
+            <button class="botaoIcone" role="button" onclick="abreCenario()" title="Cenário">
+                <img src="../recursos/imagens/icones/icone_cenario.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreJogador()" title="Jogador">
+                <img src="../recursos/imagens/icones/icone_jogador.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" title="Regras" onclick="abreRegras()">
+                <img src="../recursos/imagens/icones/icone_regras.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreMestre()" title="Mestre">
+                <img src="../recursos/imagens/icones/icone_mestre.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreInterpretando()" title="Interpretando">
+                <img src="../recursos/imagens/icones/icone_interpretando.gif" class="icone-menu">
+            </button>
+        </div>
+
+        <div id="conteudoPrincipal" class="conteudoPrincipal">
+            <img src="../recursos/imagens/cabecalhos/cabecalho_grupos.png" class="imagem-cabecalho">
+            <div class="blocoConteudo">
+                <span class="titulo">Grupos influentes</span>
+
+                <p>
+                    Phantasia é um mundo de aventuras, e onde há aventureiros há oportunidades. Indivíduos se reúnem em grupos com interesses 
+                    em comum para oferecer mercadorias, informações, suporte e até conforto e segurança.
+                </p>
+
+                <div class="blocoPersonagens">
+
+                    <details class="topico-personagem">
+                        <summary class="subtitulo">
+                            <img src="../recursos/imagens/grupos/grupos_vandalos.png" class="iconeImagem">
+                            <span>Vândalos</span>
+                        </summary>
+                        <p>
+                            Os Vândalos são vários pequenos grupos de exploradores, mercenários, corsários, aventureiros e foras-da-lei unidos sob códigos 
+                            de conduta e a liderança de Gëra McViking.
+                        </p>
+                        <p>
+                            Eles atuam por toda Phantasia, mas no geral ficam nas costas.
+                        </p>
+                        <p>
+                            Cada grupo possui seus próprios líderes e condutas, mas no geral todos reportam ao comando de Gëra. E isso traz muitas vantagens 
+                            para todos, inclusive proteção sob o nome lendário da elfa.
+                        </p>
+                        <p>
+                            E claro que manchar o nome dela traz repercursões bem pesadas...
+                        </p>
+                        <button type="button" class="fechar-topico">Fechar tópico</button>
+                    </details>
+
+                    <details class="topico-personagem">
+                        <summary class="subtitulo">
+                            <img src="../recursos/imagens/grupos/grupos_conselho.png" class="iconeImagem">
+                            <span>Conselho de Phantasia</span>
+                        </summary>
+                        <p>
+                            O Conselho de Phantasia é o enclave político que reúne representantes das espécias do continente, para que haja justiça e equidade
+                            nas relações e nas leis.
+                        </p>
+                        <p>
+                            Cada governo de espécie escolhe internamente seu representante e o envia para uma embaixada no Reino dos Sábios, para então atuarem com 
+                            o os representantes do Rei.
+                        </p>
+                        <p>
+                            É atualmente composto por Alura dos humanos, Carólin dos elfos, Julian dos goblins, Elisa dos hobbits, Isis das fadas, Safira dos 
+                            orcs e Túrin dos anões, além da rainha Jak'Ln. Esporadicamente, Gëra e Jonatas falam em nome dos chamados Povos Livres Miscigenados (os 
+                            Vândalos e os Piratas, respectivamente).
+                        </p>
+                        <button type="button" class="fechar-topico">Fechar tópico</button>
+                    </details>
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
