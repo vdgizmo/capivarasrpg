@@ -1,3 +1,18 @@
+/* Centraliza o conteúdo da tag summary (imagem + texto) */
+.topico-personagem summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 1px; */
+    cursor: pointer;
+    /* padding: 10px; */
+    list-style: none;
+}
+
+.topico-personagem summary::-webkit-details-marker {
+    display: none;
+}
+
 .blocoPersonagens {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
