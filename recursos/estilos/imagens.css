@@ -90,4 +90,8 @@
         height: 100%;
         object-fit: contain;
     }
+
+    .imagem-cabecalho {
+        display: none;
+    }
 }
