@@ -146,9 +146,11 @@ body p {
 .citacaoNome {
     font-size: 0.8em;
     color: #066674;
-    font-weight: 500;;
+    font-weight: 500;
+    font-family: 'Fredoka', sans-serif;
 }
 
-.citacao p {
-    font-family: 'Segoe UI', sans-serif;
+.citacaoTexto {
+    font-family: 'Stay With Me', sans-serif;
+    font-size: 1.4em;
 }

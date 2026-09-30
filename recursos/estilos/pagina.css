@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Stay With Me';
+  src: url('../fontes/stay_with_me.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
     /* background: #E7F1F2; */
     background: #008983;
