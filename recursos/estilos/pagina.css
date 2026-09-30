@@ -14,12 +14,6 @@ body {
     line-height: 1.6;
 }
 
-body p {
-    text-align: justify;
-    hyphens: auto;
-    overflow-wrap: break-word;
-}
-
 .menuBarra {
     display: flex;
     flex-direction: row;
@@ -93,14 +87,29 @@ body p {
 }
 
 .citacao {
+    position: relative;
     width: 100%;
     border: none;
-    border-radius: 20px;
-    padding: 11px;
+    border-radius: 10px;
+    padding: 1.4em 0.8em 0.1em 0.8em;
     margin-inline: auto;
-   /* background: #E7F1F2; */
+    background: #fff1d6;
     box-shadow: 3px 0 0 0 #066674 inset;
     box-sizing: border-box;
+}
+
+.citacao::after {
+  content: "";
+  position: absolute;
+  top: 10px; /* Distância do topo */
+  right: 10px; /* Distância da direita */
+  width: 30px; /* Largura do ícone */
+  height: 30px; /* Altura do ícone */
+  background-image: url('../imagens/icones/citacao_azul.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* opacity: 0.5; */
 }
 
 /* .blocoBotao {

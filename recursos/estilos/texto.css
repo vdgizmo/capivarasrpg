@@ -1,3 +1,9 @@
+body p {
+    text-align: justify;
+    hyphens: auto;
+    overflow-wrap: break-word;
+}
+
 .titulo {
     font-size: clamp(1.75rem, 2.5vw + 1rem, 2.5rem);
     color: #008983;
@@ -135,4 +141,10 @@
     top: -11px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.citacaoNome {
+    font-size: 0.8em;
+    color: #066674;
+    font-weight: 500;;
 }
