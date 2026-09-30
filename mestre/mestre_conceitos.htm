@@ -1,0 +1,111 @@
+<html lang="pt-BR">
+    <head>
+        <title>Capivaras & Calabouços - Conceitos de Mestragem</title>
+        <link rel="stylesheet" href="../recursos/estilos/pagina.css">
+        <link rel="stylesheet" href="../recursos/estilos/texto.css">
+        <link rel="stylesheet" href="../recursos/estilos/topico.css">
+        <link rel="stylesheet" href="../recursos/estilos/menu_overlay.css">
+        <link rel="stylesheet" href="../recursos/estilos/imagens.css">
+        <link rel="stylesheet" href="../recursos/estilos/personagens.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <script src="../recursos/scripts/menu_overlay.js"></script>
+
+        <div id="navJogador" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaJogador()">&times;</a>
+            <div class="overlay-content">
+                <a href="../jogador/jogador_index.htm">Olá, Jogador!</a>
+                <a href="../jogador/jogador_criando.htm">Criando e Ficha</a>
+                <a href="../jogador/jogador_especies.htm">Espécies</a>
+                <a href="../jogador/jogador_classes.htm">Classes</a>
+                <a href="../jogador/jogador_caracteristicas.htm">Características</a>
+                <a href="../jogador/jogador_vantagens.htm">Vantagens</a>
+                <a href="../jogador/jogador_desvantagens.htm">Desvantagens</a>
+                <a href="../jogador/jogador_habilidades.htm">Habilidades</a>
+                <a href="../jogador/jogador_grimorio.htm">Grimório</a>
+            </div>
+        </div>
+
+        <div id="navMestre" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaMestre()">&times;</a>
+            <div class="overlay-content">
+                <a href="../mestre/mestre_index.htm">Olá, Mestre!</a>
+                <a href="../mestre/mestre_conceitos.htm">Conceitos</a>
+                <a href="../mestre/mestre_preparacao.htm">Preparação</a>
+                <a href="../mestre/mestre_acordo.htm">Acordo social</a>
+                <a href="../mestre/mestre_mestrando.htm">Mestrando</a>
+                <a href="../mestre/mestre_bestiario.htm">Bestiário</a>
+                <a href="../mestre/mestre_ganchos.htm">Ganchos</a>
+            </div>
+        </div>
+
+        <div id="navCenario" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaCenario()">&times;</a>
+            <div class="overlay-content">
+                <a href="./cenario_phantasia.htm">Breve história</a>
+                <a href="./cenario_locais.htm">Locais importantes</a>
+                <a href="./cenario_pessoas.htm">Pessoas notáveis</a>
+                <a href="./cenario_grupos.htm">Grupos influentes</a>
+                <a href="./cenario_mapa.htm">Mapa de Phantasia</a>
+            </div>
+        </div>
+        
+        <div id="navRegras" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaRegras()">&times;</a>
+            <div class="overlay-content">
+                <a href="../regras/regras_gerais.htm">Regras gerais</a>
+                <a href="../regras/regras_combate.htm">Combate</a>
+                <a href="../regras/regras_magia.htm">Magia</a>
+            </div>
+        </div>
+
+        <div id="navInterpretando" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaInterpretando()">&times;</a>
+            <div class="overlay-content">
+                <a href="../interpretando/interpretando_index.htm">Interpretando</a>
+                <a href="../interpretando/interpretando_arquetipos.htm">Arquétipos</a>
+                <a href="../interpretando/interpretando_ficha.htm">Ficha de Personagem</a>
+            </div>
+        </div>
+        
+        <div class="menuBarra">
+            <a href="../index.htm">
+                <button class="botaoIcone" role="button" title="Início">
+                    <img src="../recursos/imagens/icones/icone_inicio.gif" class="icone-menu">
+                </button>
+            </a>
+
+            <button class="botaoIcone" role="button" onclick="abreCenario()" title="Cenário">
+                <img src="../recursos/imagens/icones/icone_cenario.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreJogador()" title="Jogador">
+                <img src="../recursos/imagens/icones/icone_jogador.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" title="Regras" onclick="abreRegras()">
+                <img src="../recursos/imagens/icones/icone_regras.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreMestre()" title="Mestre">
+                <img src="../recursos/imagens/icones/icone_mestre.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreInterpretando()" title="Interpretando">
+                <img src="../recursos/imagens/icones/icone_interpretando.gif" class="icone-menu">
+            </button>
+        </div>
+
+        <div id="conteudoPrincipal" class="conteudoPrincipal">
+            <img src="../recursos/imagens/cabecalhos/cabecalho_conceitos.png" class="imagem-cabecalho">
+            <div class="blocoConteudo">
+                <span class="titulo">Conceitos de Mestragem</span>
+
+                <p>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

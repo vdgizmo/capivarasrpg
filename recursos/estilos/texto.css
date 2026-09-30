@@ -148,3 +148,7 @@ body p {
     color: #066674;
     font-weight: 500;;
 }
+
+.citacao p {
+    font-family: 'Segoe UI', sans-serif;
+}

@@ -1,0 +1,295 @@
+<html lang="pt-BR">
+    <head>
+        <title>Capivaras & Calabouços - Interpretando</title>
+        <link rel="stylesheet" href="../recursos/estilos/pagina.css">
+        <link rel="stylesheet" href="../recursos/estilos/texto.css">
+        <link rel="stylesheet" href="../recursos/estilos/topico.css">
+        <link rel="stylesheet" href="../recursos/estilos/menu_overlay.css">
+        <link rel="stylesheet" href="../recursos/estilos/imagens.css">
+        <link rel="stylesheet" href="../recursos/estilos/personagens.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <script src="../recursos/scripts/menu_overlay.js"></script>
+
+        <div id="navJogador" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaJogador()">&times;</a>
+            <div class="overlay-content">
+                <a href="../jogador/jogador_index.htm">Olá, Jogador!</a>
+                <a href="../jogador/jogador_criando.htm">Criando e Ficha</a>
+                <a href="../jogador/jogador_especies.htm">Espécies</a>
+                <a href="../jogador/jogador_classes.htm">Classes</a>
+                <a href="../jogador/jogador_caracteristicas.htm">Características</a>
+                <a href="../jogador/jogador_vantagens.htm">Vantagens</a>
+                <a href="../jogador/jogador_desvantagens.htm">Desvantagens</a>
+                <a href="../jogador/jogador_habilidades.htm">Habilidades</a>
+                <a href="../jogador/jogador_grimorio.htm">Grimório</a>
+            </div>
+        </div>
+
+        <div id="navMestre" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaMestre()">&times;</a>
+            <div class="overlay-content">
+                <a href="../mestre/mestre_index.htm">Olá, Mestre!</a>
+                <a href="../mestre/mestre_conceitos.htm">Conceitos</a>
+                <a href="../mestre/mestre_preparacao.htm">Preparação</a>
+                <a href="../mestre/mestre_acordo.htm">Acordo social</a>
+                <a href="../mestre/mestre_mestrando.htm">Mestrando</a>
+                <a href="../mestre/mestre_bestiario.htm">Bestiário</a>
+                <a href="../mestre/mestre_ganchos.htm">Ganchos</a>
+            </div>
+        </div>
+
+        <div id="navCenario" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaCenario()">&times;</a>
+            <div class="overlay-content">
+                <a href="../cenario/cenario_phantasia.htm">Breve história</a>
+                <a href="../cenario/cenario_locais.htm">Locais importantes</a>
+                <a href="../cenario/cenario_pessoas.htm">Pessoas notáveis</a>
+                <a href="../cenario/cenario_grupos.htm">Grupos influentes</a>
+                <a href="../cenario/cenario_mapa.htm">Mapa de Phantasia</a>
+            </div>
+        </div>
+        
+        <div id="navRegras" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaRegras()">&times;</a>
+            <div class="overlay-content">
+                <a href="../regras/regras_gerais.htm">Regras gerais</a>
+                <a href="../regras/regras_combate.htm">Combate</a>
+                <a href="../regras/regras_magia.htm">Magia</a>
+            </div>
+        </div>
+
+        <div id="navInterpretando" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaInterpretando()">&times;</a>
+            <div class="overlay-content">
+                <a href="./interpretando_index.htm">Interpretando</a>
+                <a href="./interpretando_arquetipos.htm">Arquétipos</a>
+                <a href="./interpretando_ficha.htm">Ficha de Personagem</a>
+            </div>
+        </div>
+        
+        <div class="menuBarra">
+            <a href="../index.htm">
+                <button class="botaoIcone" role="button" title="Início">
+                    <img src="../recursos/imagens/icones/icone_inicio.gif" class="icone-menu">
+                </button>
+            </a>
+
+            <button class="botaoIcone" role="button" onclick="abreCenario()" title="Cenário">
+                <img src="../recursos/imagens/icones/icone_cenario.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreJogador()" title="Jogador">
+                <img src="../recursos/imagens/icones/icone_jogador.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" title="Regras" onclick="abreRegras()">
+                <img src="../recursos/imagens/icones/icone_regras.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreMestre()" title="Mestre">
+                <img src="../recursos/imagens/icones/icone_mestre.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreInterpretando()" title="Interpretando">
+                <img src="../recursos/imagens/icones/icone_interpretando.gif" class="icone-menu">
+            </button>
+        </div>
+
+        <div id="conteudoPrincipal" class="conteudoPrincipal">
+            <img src="../recursos/imagens/cabecalhos/cabecalho_interpretando.png" class="imagem-cabecalho">
+            <div class="blocoConteudo">
+                <span class="titulo">Interpretando</span>
+                <p>
+                    Dentro de um ambiente fictício da narrativa compartilhada, falar “vou tentar subornar o guarda para que passemos pelo 
+                    portão” tem o mesmo peso que o jogador declamar dramaticamente “ó protetor dos portais, faço um apelo a ti com um agrado 
+                    monetário para que possas olhar para o outro lado”. A mensagem e ações passadas são as mesmas.
+                </p>
+                <p>
+                    Em geral, jogadores de RPG, ainda mais os mais experientes, estão acostumados a associar que mais elaborado é melhor. 
+                    Devemos encontrar um meio-termo agradável para todos na mesa.
+                </p>
+                <p>
+                    Se o jogo oferece mecânicas para disputas sociais, o sucesso destas disputas não deveria vir da capacidade de persuasão da vida 
+                    real do jogador (o que não impede que ele receba algum tipo de recompensa por sua interpretação). Essa distinção é importante 
+                    porque se o narrador recompensa o rebuscamento das palavras e ignora rolagens faz com que duas coisas aconteçam: jogadores introvertidos 
+                    fiquem proibidos de jogar com personagens com habilidades sociais, e que perícias sociais sejam inúteis mecanicamente, já que um 
+                    jogador com lábia afiada não precisará testá-las.
+                </p>
+                <p>
+                    Depende muito do gosto do grupo, mas em resumo: se você quer falar exatamente como o personagem, fazer sua voz, seus jeitos, faça isso! 
+                    Quer dizer o que ele está pensando e fazendo? Pode também. Se todos estão se divertindo então tudo está bem.
+                </p>
+                <p>
+                    Uma coisa é certa: todo jogador gostaria de ser e fazer melhor ou diferente, mas é surpreendentemente comum a frequência com que a 
+                    maioria dos jogadores esquecem de fazer as coisas mais óbvias.
+                </p>
+
+                <details class="topico">
+                    <summary class="subtitulo"><span>Seja interessante!</span></summary>
+                    <p>
+                        Pense em personagens que queiram estar se envolvendo nas situações, que estejam sempre buscando algo mais e que tenham motivos 
+                        para não se contentar e ficar parados. Os protagonistas de uma história precisam fazer a diferença.
+                    </p>
+                    <p>
+                        Imagine algo que faça seu personagem se destacar dos outro e dê vida a essa característica. Mas também, crie um personagem incompleto, 
+                        que precise de algo, que sinta a necessidade de mais. Um personagem que não tenha esses “pedaços” faltando não tem espaço para crescer 
+                        e se desenvolver, muito menos terá razões para ir em busca de aventuras e se envolver em mistérios e outras coisas que pessoas normais 
+                        ignorariam.
+                    </p>
+                    <p>
+                        Como o RPG é um jogo colaborativo e social, onde, geralmente, você joga em conjunto com outras pessoas, é de bom grado que seu personagem 
+                        tenha fraquezas que precisem de companheiros para ajudá-lo. Isso permite que cada jogador tenha um papel no grupo e chance de se destacar, 
+                        sem contar que personagens com fraquezas são muito mais humanos e identificáveis.
+                    </p>
+                    <p>
+                        Por fim, quando estiver jogando com o seu personagem pense como se fosse ele, aja como ele agiria na narrativa e não em termos de jogo. 
+                        Haverá situações em que você sabe que uma escolha seria mais vantajosa em termos de jogo, mas que seu personagem tomaria uma decisão diferente 
+                        devido a sua personalidade e conhecimento limitado. Este é um jogo de se criar histórias e não um jogo de competição para ver quem cria o 
+                        personagem mais forte (até porque, se fosse, o Mestre ganharia sempre).
+                    </p>
+                    <button type="button" class="fechar-topico">Fechar tópico</button>
+                </details>
+
+                <details class="topico">
+                    <summary class="subtitulo"><span>Preste atenção!</span></summary>
+                    <p>
+                        Mesmo que não seja o seu turno ou você não esteja interagino na cena, você precisa prestar atenção ao que está acontecendo ao seu redor. 
+                        Esteja atento, não perca a oportunidade de agir e evite atrapalhar fazendo a escolha errada ou pior: nenhuma.
+                    </p>
+                    <button type="button" class="fechar-topico">Fechar tópico</button>
+                </details>
+
+                <details class="topico">
+                    <summary class="subtitulo"><span>Conheça seu personagem!</span></summary>
+                    <p>
+                        Quando um jogador desconhece as capacidades do seu personagem, ele pode não só não aproveitar todo o potencial e diversão do jogo, como 
+                        atrapalhar o grupo inteiro interrompendo o andamento do jogo.
+                    </p>
+                    <p>
+                        É responsabilidade do jogador saber o que o seu personagem é capaz de fazer. Não compreender ou estar em dúvida quanto uma regra é 
+                        totalmente normal, mas espera-se que o jogador conheça o seu personagem.
+                    </p>
+                    <img src="../recursos/imagens/ficha_personagem_estilizada.png" class="imagem-texto">
+                    <p>
+                        Tenha sempre a ficha em mãos e faça anotações.
+                    </p>
+                    <button type="button" class="fechar-topico">Fechar tópico</button>
+                </details>
+
+                <details class="topico">
+                    <summary class="subtitulo"><span>Mantenha a ficha atualizada!</span></summary>
+                    <p>
+                        Manter a ficha do seu personagem atualizada é tão importante para você quanto para o grupo de jogadores, principalmente em jogos com 
+                        a mecânica de progressão de níveis.
+                    </p>
+                    <p>
+                        Em diversos jogos, conforme for a situação, existirão modificadores e bônus relevantes que determinarão um sucesso ou falha nas rolagens 
+                        de dados. Logo, manter a ficha sempre atualizada é especialmente importante para aumentar as chances do seu personagem obter um 
+                        resultado satisfatório quando houver um conflito no jogo.
+                    </p>
+                    <button type="button" class="fechar-topico">Fechar tópico</button>
+                </details>
+
+                <details class="topico">
+                    <summary class="subtitulo"><span>Não atrase o jogo!</span></summary>
+                    <p>
+                        No geral, retardar o jogo somente para procurar alguma regra obscura nos livros não ajudará, é um desperdício de tempo e de diversão. 
+                        Se algum jogador não tem certeza sobre determinada regra, usar o bom senso para seguir em frente será sempre a melhor decisão. 
+                        <span class="marca-texto">Para isso existe o Mestre,</span> que orientará o jogador sobre a melhor maneira de manter o jogo em movimento.
+                    </p>
+                    <p>
+                        Se todos concordam em parar e procurar por uma regra para uma eventual situação em jogo, então significa que é um momento importante na 
+                        sessão. Do contrário, relaxe e continue jogando.
+                    </p>
+                    <button type="button" class="fechar-topico">Fechar tópico</button>
+                </details>
+
+                <details class="topico">
+                    <summary class="subtitulo"><span>Seja prudente e esteja pronto!</span></summary>
+                    <p>
+                        Exceto que faça parte do conceito do seu personagem ser o centro das atenções na grande maioria das vezes, ser cauteloso é uma 
+                        forma sensata de evitar perigos, permitindo discernir qual o melhor caminho a seguir, ou qual a melhor ação a adotar para uma determinada 
+                        situação em jogo.
+                    </p>
+                    <p>
+                        <span class="marcaTexto">Observar, analisar e compreender a situação em jogo permitirá que o problema seja solucionado com maior facilidade.</span>
+                    </p>
+                    <p>
+                        Novamente, aqui cabe o conceito do seu personagem, como ele é e agiria. Mas no geral você deve estar sempre pronto para agir imediatamente. 
+                        Jogadores experientes parecem estar sempre preparados para qualquer circunstância em jogo e isso advém de sua sabedoria, prudência e boa observação. 
+                        Quanto melhor você se prepara, mais chance terá de realizar ações e reações imediatamente, de forma clara e confiante.
+                    </p>
+                    <button type="button" class="fechar-topico">Fechar tópico</button>
+                </details>
+
+                <details class="topico">
+                    <summary class="subtitulo"><span>Planeje!</span></summary>
+                    <p>
+                        Observando o que os outros jogadores estão fazendo, um jogador estará mais bem preparado para agir em seu turno, sendo essa uma boa razão 
+                        para prestar atenção quando não é sua vez. Você poderá planejar, definindo melhor as suas ações, agindo da melhor maneira.
+                    </p>
+                    <p>
+                        Planejar suas ações se torna mais importante quando existem muitas opções disponíveis para o seu personagem; o jogador precisa saber 
+                        qual será a sua ação e não vai atrasar o jogo no seu turno.
+                    </p>
+                    <button type="button" class="fechar-topico">Fechar tópico</button>
+                </details>
+
+                <details class="topico">
+                    <summary class="subtitulo"><span>Anote e faça resumos!</span></summary>
+                    <p>
+                        Conforme a campanha segue, a história do seu personagem cresce. E, além de tudo o que acontece, se o seu personagem tem vários tipos de 
+                        habilidades, magias, poderes, itens, contatos e aliados, é quase impossível lembrar-se de tudo ou mesmo ter espaço suficiente na ficha para 
+                        preencher todos estes requisitos.
+                    </p>
+                    <p>
+                        Logo, o ideal é fazer pequenas anotações de eventos importantes, locais, nomes de personagens do Mestre e resumos de habilidades, 
+                        magias, danos e tudo aquilo que julgar necessário, facilitando o trabalho de procurar.
+                    </p>
+                    <button type="button" class="fechar-topico">Fechar tópico</button>
+                </details>
+
+                <details class="topico">
+                    <summary class="subtitulo"><span>Seja mais humano!</span></summary>
+                    <p>
+                        Muitos pensam que a interpretação começa no início da sessão. Mas o que poucos sabem é que esse processo começa na criação do background. 
+                        Pense em algo diferente, escreva os gostos pessoais, se ele gosta de frio, odeia calor, se tem alguma alergia ou se simplesmente ronca 
+                        enquanto dorme. Acrescente pequenos traços a sua personalidade.
+                    </p>
+                    <p>
+                        Uma coisa que faz seu personagem ganhar vida e ser memorável é criar hábitos e manias (uma tosse frequente, o retrato de sua filha 
+                        no bolso, coisas assim).
+                    </p>
+                    <p>
+                        Lembre-se do físico também. Aproveite seu personagem. Se ele é alguém de estatura alta e musculoso, você pode erguer pessoas, 
+                        intimidar com mais facilidade ou levantar objetos maiores para jogar, vai da sua imaginação. Se você é alguém alto e forte, 
+                        biologicamente é necessário comer mais. Usar sua aparência no role play facilita sua criatividade; sempre pense como ele e nunca 
+                        como o jogador, afinal de contas, você está vivenciando outra vida.
+                    </p>
+                    <p>
+                        Se quiser, use o jeito dele de falar, faça os gestos que ele faria, reaja como ele diante de algo. Imagine a si mesmo vivendo 
+                        as experiências dele.
+                    </p>
+                    <p>
+                        Durante o jogo, <span class="marca-texto">faça o que seu personagem faria, mesmo sendo uma ideia ruim</span>. Por exemplo: o 
+                        jogador acha uma péssima ideia entrar naquele 
+                        lugar cheio de inimigos. Contudo, o personagem é um bárbaro que acredita ser forte o bastante para vencer todos e quer entrar lá. 
+                        Então entre lá. Jogos de interpretação são sobre contar histórias, não sobre vitória ou derrota.
+                    </p>
+                    <img src="../recursos/imagens/leeroy_jenkins.png" class="imagem-texto">
+                    <p>
+                        Você conhece a história de <span class="textoNegrito">Leeroy Jenkins</span> (imagem acima)? É de um vídeo viral sobre um jogador de 
+                        <span class="textoItalico">World of Warcraft</span> que não esperou o grupo terminar o planejamento do ataque e avançou sobre uma 
+                        horda de monstros poderosos gritando o próprio nome. Ele e todo o grupo morreram. É um ótimo exemplo de “se o personagem faria, faça”. 
+                        Ou também, de pensar melhor e ser prudente.
+                    </p>
+                    <button type="button" class="fechar-topico">Fechar tópico</button>
+                </details>
+
+            </div>
+        </div>
+    </body>
+</html>
