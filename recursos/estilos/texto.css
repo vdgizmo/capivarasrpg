@@ -16,18 +16,25 @@ body p {
     font-weight: 600;
 }
 
-.subtitulo-interno {
+/* .subtitulo-interno {
     margin-left: 20px;
     margin-right: 20px;
-}
+} */
 
 .titulo-central {
     display: block;
     text-align: center;
 }
 
-.subtitulo-ficha::before, .subtitulo-interno::before {
+.subtitulo-ficha::before {
     content: '📜'; /* ✨, 🛡️, ⚔️, 📜, ⭐ */
+    font-size: 0.95em;
+    display: inline-block;
+    animation: balanco 2s infinite ease-in-out; 
+}
+
+.subtitulo-interno::before {
+    content: '⚔️'; /* ✨, 🛡️, ⚔️, 📜, ⭐ */
     font-size: 0.95em;
     display: inline-block;
     animation: balanco 2s infinite ease-in-out; 
@@ -151,6 +158,6 @@ body p {
 }
 
 .citacaoTexto {
-    font-family: 'Stay With Me', sans-serif;
-    font-size: 1.4em;
+    font-family: 'Finger Paint', sans-serif;
+    font-size: 0.9em;
 }
