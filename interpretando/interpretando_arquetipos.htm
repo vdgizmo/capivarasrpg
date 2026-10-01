@@ -1,0 +1,486 @@
+<html lang="pt-BR">
+    <head>
+        <title>Capivaras & Calabouços - Arquétipos</title>
+        <link rel="stylesheet" href="../recursos/estilos/pagina.css">
+        <link rel="stylesheet" href="../recursos/estilos/texto.css">
+        <link rel="stylesheet" href="../recursos/estilos/topico.css">
+        <link rel="stylesheet" href="../recursos/estilos/menu_overlay.css">
+        <link rel="stylesheet" href="../recursos/estilos/imagens.css">
+        <link rel="stylesheet" href="../recursos/estilos/personagens.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <script src="../recursos/scripts/menu_overlay.js"></script>
+
+        <div id="navJogador" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaJogador()">&times;</a>
+            <div class="overlay-content">
+                <a href="../jogador/jogador_index.htm">Olá, Jogador!</a>
+                <a href="../jogador/jogador_criando.htm">Criando e Ficha</a>
+                <a href="../jogador/jogador_especies.htm">Espécies</a>
+                <a href="../jogador/jogador_classes.htm">Classes</a>
+                <a href="../jogador/jogador_caracteristicas.htm">Características</a>
+                <a href="../jogador/jogador_vantagens.htm">Vantagens</a>
+                <a href="../jogador/jogador_desvantagens.htm">Desvantagens</a>
+                <a href="../jogador/jogador_habilidades.htm">Habilidades</a>
+                <a href="../jogador/jogador_grimorio.htm">Grimório</a>
+            </div>
+        </div>
+
+        <div id="navMestre" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaMestre()">&times;</a>
+            <div class="overlay-content">
+                <a href="../mestre/mestre_index.htm">Olá, Mestre!</a>
+                <a href="../mestre/mestre_conceitos.htm">Conceitos</a>
+                <a href="../mestre/mestre_preparacao.htm">Preparação</a>
+                <a href="../mestre/mestre_acordo.htm">Acordo social</a>
+                <a href="../mestre/mestre_mestrando.htm">Mestrando</a>
+                <a href="../mestre/mestre_bestiario.htm">Bestiário</a>
+                <a href="../mestre/mestre_ganchos.htm">Ganchos</a>
+            </div>
+        </div>
+
+        <div id="navCenario" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaCenario()">&times;</a>
+            <div class="overlay-content">
+                <a href="../cenario/cenario_phantasia.htm">Breve história</a>
+                <a href="../cenario/cenario_locais.htm">Locais importantes</a>
+                <a href="../cenario/cenario_pessoas.htm">Pessoas notáveis</a>
+                <a href="../cenario/cenario_grupos.htm">Grupos influentes</a>
+                <a href="../cenario/cenario_mapa.htm">Mapa de Phantasia</a>
+            </div>
+        </div>
+        
+        <div id="navRegras" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaRegras()">&times;</a>
+            <div class="overlay-content">
+                <a href="../regras/regras_gerais.htm">Regras gerais</a>
+                <a href="../regras/regras_combate.htm">Combate</a>
+                <a href="../regras/regras_magia.htm">Magia</a>
+            </div>
+        </div>
+
+        <div id="navInterpretando" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="fechaInterpretando()">&times;</a>
+            <div class="overlay-content">
+                <a href="./interpretando_index.htm">Interpretando</a>
+                <a href="./interpretando_arquetipos.htm">Arquétipos</a>
+                <a href="./interpretando_ficha.htm">Ficha de Personagem</a>
+            </div>
+        </div>
+        
+        <div class="menuBarra">
+            <a href="../index.htm">
+                <button class="botaoIcone" role="button" title="Início">
+                    <img src="../recursos/imagens/icones/icone_inicio.gif" class="icone-menu">
+                </button>
+            </a>
+
+            <button class="botaoIcone" role="button" onclick="abreCenario()" title="Cenário">
+                <img src="../recursos/imagens/icones/icone_cenario.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreJogador()" title="Jogador">
+                <img src="../recursos/imagens/icones/icone_jogador.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" title="Regras" onclick="abreRegras()">
+                <img src="../recursos/imagens/icones/icone_regras.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreMestre()" title="Mestre">
+                <img src="../recursos/imagens/icones/icone_mestre.gif" class="icone-menu">
+            </button>
+
+            <button class="botaoIcone" role="button" onclick="abreInterpretando()" title="Interpretando">
+                <img src="../recursos/imagens/icones/icone_interpretando.gif" class="icone-menu">
+            </button>
+        </div>
+
+        <div id="conteudoPrincipal" class="conteudoPrincipal">
+            <img src="../recursos/imagens/cabecalhos/cabecalho_arquetipos.png" class="imagem-cabecalho">
+            <div class="blocoConteudo">
+                <span class="titulo">Arquétipos</span>
+
+                <div class="citacao">
+                    <p><span class="citacaoTexto">- Todos esses arquétipos... sabe, nós somos todos eles, 
+                        e você precisa aprender a honrá-los 
+                        e reconhecê-los dentro de si.<br>
+                        - Além disso, você pode ser pessoas que não é.<br>
+                        - Hum. Verdade. E pessoas que você é.</span></p>
+                    <p><span class="citacaoNome">Devin Greyson em <span class="textoItalico">Users</span>, livro 3</p>
+                </div>
+
+                <p>
+                    Seu personagem é quem você quiser e como você quiser, mas pensar em alguns pontos base podem te ajudar 
+                    a criar alguém interessante e divertido. Um meio de atingir isso é usando 
+                    <span class="marca-texto">arquétipos.</span>
+                </p>
+                <p>
+                    Um arquétipo gera valores, habilidades e comportamentos diferentes para o personagem de 
+                    RPG que você está construindo.
+                </p>
+
+                <span class="subtitulo-principal">Mas o que é isso?</span>
+
+                <p>
+                    Um arquétipo é uma forma conhecida e aprovada de representar algo, ou seja, é o padrão de 
+                    características que define algo que já conhecemos. Por exemplo, o arquétipo do nerd gira em 
+                    torno de uma pessoa com um conhecimento profundo por temáticas não muito populares, uma 
+                    aptidão para os estudos e um certo desajuste social provocado pela peculiaridade de seus interesses.
+                </p>
+                <p>
+                    Usar um arquétipo pode trazer benefícios como: apresenta de forma simples 
+                    <span class="marca-texto">sua identidade</span>; entrega um <span class="marca-texto">conjunto de 
+                    habilidades e aptidões</span>; e torna seu <span class="marca-texto">personagem consistente</span> durante 
+                    todo o jogo.
+                </p>
+                <p>
+                    Um arquétipo não é um limitador. Mais abaixo vamos citar Katniss, por exemplo, como o arquétipo de Líder, mas 
+                    ela também pode ser uma Rebelde. As pessoas não são simples, seus personagens também não deveriam ser.
+                </p>
+                <p>
+                    Em seguida você verá alguns exemplos, mas não se sinta preso a eles. A sua imaginação 
+                    é o limite.
+                </p>
+
+                <div class="blocoPersonagens">
+
+                    <details class="topico-personagem">
+                        <summary class="subtitulo">
+                            <img src="../recursos/imagens/arquetipos/apaixonado.png" class="iconeImagem">
+                            <span>Apaixonado</span>
+                            <br>
+                            <span class="arquetipo-tag">Fiel & desesperado</span>
+                        </summary>
+                        <p>
+                            Tem gente que faz tudo por amor. Sob o olhar dos outros, as declarações e confissões do personagem Apaixonado 
+                            podem parecer exageradas e até cômicas, mas a verdade é que sua paixão arde tão forte que sua existência não 
+                            pode suportar mais um dia longe da coisa amada.
+                        </p>
+                        <p>
+                            A devoção do Apaixonado pode ser comparada com a obsessão do Líder e a energia caótica do Rebelde. O lado 
+                            negativo deste arquétipo é que nem sempre seu amor é correspondido, podendo vir a sofrer uma terrível perda 
+                            ou um trágico sacrifício por alguém que não correspondia aos seus sentimentos, por exemplo.
+                        </p>
+                        <p>
+                            O que o Apaixonado mais quer na sua vida é se reunir com seu objeto de amor, e para chegar até lá, deixará a própria 
+                            identidade para trás e jogará aos quatro ventos o que restou da sua liberdade.
+                        </p>
+                        <span class="subtitulo-interno">Inspiração:</span>
+                        <p>
+                            <span class="marca-texto">Gollum</span>, de O Senhor dos Anéis, é um bom exemplo de Apaixonado. Ele 
+                            foi corrompido e corroído por seu amor pelo
+                            Um Anel.
+                        </p>
+                        <p>
+                            <span class="textoNegrito">Outros:</span><br>
+                            - Westley (A Princesa Prometida);<br>
+                            - Anakin Skywalker (<span class="textoItalico">Star Wars</span>);<br>
+                            - Romeu Montecchio (Romeu e Julieta);<br>
+                            - Carl Fredricksen (Up - Altas Aventuras);<br>
+                            - Gomez Addams (A Família Addams \ Wandinha).
+                        </p>
+                        <button type="button" class="fechar-topico">Fechar tópico</button>
+                    </details>
+
+                    <details class="topico-personagem">
+                        <summary class="subtitulo">
+                            <img src="../recursos/imagens/arquetipos/cuidador.png" class="iconeImagem">
+                            <span>Cuidador</span>
+                            <br>
+                            <span class="arquetipo-tag">Carinhoso & frágil</span>
+                        </summary>
+                        <p>
+                            Este arquétipo se caracteriza por priorizar as vontades e necessidades dos outros.
+                        </p>
+                        <p>
+                            São personagens que colocam a saúde de seus aliados acima de suas próprias vidas 
+                            e se apresentam com absoluta lealdade às pessoas que amam. O Cuidador é um 
+                            personagem de suporte. Quando o próprio líder pensa em desistir, é ele que 
+                            reacende a chama da esperança e traz todos de volta ao jogo.
+                        </p>
+                        <p>
+                            Ainda assim, todo arquétipo apresenta defeitos ou fraquezas, e isso não é diferente para o 
+                            Cuidador, que apesar de um grande coração, tende a ser vulnerável emocionalmente, 
+                            permitindo que os outros tirem proveito dele sem oferecer muita resistência.
+                        </p>
+                        <span class="subtitulo-interno">Inspiração:</span>
+                        <p>
+                            <span class="marca-texto">Steve Harrington</span>, de <span class="textoItalico">Stranger Things</span>, 
+                            é um bom exemplo de Cuidador. 
+                            Começa como um personagem mais egoísta, mas se transforma em alguém extremamente protetor, que 
+                            frequentemente assume o papel de "babá" do grupo, colocando-se fisicamente em perigo para 
+                            proteger os amigos.
+                        </p>
+                        <p>
+                            <span class="textoNegrito">Outros:</span><br>
+                            - Alfred Pennyworth (Batman);<br>
+                            - Samwise Gamgee (O Senhor dos Anéis);<br>
+                            - Steve Rogers, o Capitão América;<br>
+                            - Sakura Haruno (Naruto);<br>
+                            - Hagrid (Harry Potter).
+                        </p>
+                        <button type="button" class="fechar-topico">Fechar tópico</button>
+                    </details>
+
+                    <details class="topico-personagem">
+                        <summary class="subtitulo">
+                            <img src="../recursos/imagens/arquetipos/exilado.png" class="iconeImagem">
+                            <span>Exilado</span>
+                            <br>
+                            <span class="arquetipo-tag">Paixão & melancolia</span>
+                        </summary>
+                        <p>
+                            O Exilado tem seus motivos para se manter emocionalmente distante do grupo, de forma a 
+                            sempre apresentar uma aparência melancólica, introspectiva e solitária.
+                        </p>
+                        <p>
+                            Por mais que seja de poucas palavras, esse personagem de RPG possui uma devoção imensa a algo 
+                            ou alguém, e no âmago de seu coração sua lealdade sempre será imaculada. Essa profundidade 
+                            emocional transborda por meio de ações que, aos olhos alheios, podem parecer divagações, 
+                            como uma canção sussurrada à noite, ou um diário mantido em segredo.
+                        </p>
+                        <p>
+                            No mais, o exilado quer ser inspirado, por isso faz bom par com o Líder e o Tolo para sair de seu 
+                            estado letárgico e voltar à ação. 
+                        </p>
+                        <span class="subtitulo-interno">Inspiração:</span>
+                        <p>
+                            <span class="marca-texto">Severus Snape</span>, de Harry Potter, é um bom exemplo de Exilado. 
+                            É isolado, amargurado e emocionalmente fechado, mas sua vida é marcada por uma devoção 
+                            extremamente profunda e secreta. Boa parte de suas ações só ganha significado quando 
+                            entendemos aquilo a que ele permaneceu leal.
+                        </p>
+                        <p>
+                            <span class="textoNegrito">Outros:</span><br>
+                            - Aragorn (O Senhor dos Anéis);<br>
+                            - Bruce Wayne, o Batman;<br>
+                            - Logan, o Wolverine;<br>
+                            - Din Djarin (O Mandaloriano);<br>
+                            - Elsa (<span class="textoItalico">Frozen</span>).
+                        </p>
+                        <button type="button" class="fechar-topico">Fechar tópico</button>
+                    </details>
+
+                    <details class="topico-personagem">
+                        <summary class="subtitulo">
+                            <img src="../recursos/imagens/arquetipos/guerreiro.png" class="iconeImagem">
+                            <span>Guerreiro</span>
+                            <br>
+                            <span class="arquetipo-tag">Focado & fechado</span>
+                        </summary>
+                        <p>
+                            Honra. Quase sempre presente em todas as mesas de RPG, o arquétipo do Guerreiro 
+                            transborda um desejo nobre por fazer o correto por vias corretas.
+                        </p>
+                        <p>
+                            Não só apenas um bom samaritano, o Guerreiro é o cúmulo da coragem e do 
+                            sacrifício. É difícil enganar o 
+                            Guerreiro que, acima de tudo, possui um código de conduta, uma série de regras que 
+                            o impedem de cair.
+                        </p>
+                        <p>
+                            O Guerreiro pode não ter um grande plano ou objetivo à frente, mas é o caminho 
+                            que escolhe trilhar que o torna uma figura carismática, confiável e seus inimigos 
+                            apenas obstáculos a serem superados.
+                        </p>
+                        <span class="subtitulo-interno">Inspiração:</span>
+                        <p>
+                            <span class="marca-texto">Tanjiro Kamado</span>, de <span class="textoItalico">Demon Slayer</span>. 
+                            Extremamente compassivo, 
+                            mas também determinado. Tanjiro enfrenta inimigos terríveis sem abandonar seus princípios 
+                            e demonstra respeito até por aqueles que precisa combater.
+                        </p>
+                        <p>
+                            <span class="textoNegrito">Outros:</span><br>
+                            - Obi-Wan Kenobi (<span class="textoItalico">Star Wars</span>);<br>
+                            - T'Challa, o Pantera Negra;<br>
+                            - Mulan, de Mulan;<br>
+                            - Link (<span class="textoItalico">The Legend of Zelda</span>);<br>
+                            - Roronoa Zoro (<span class="textoItalico">One Piece</span>).
+                        </p>
+                        <button type="button" class="fechar-topico">Fechar tópico</button>
+                    </details>
+
+                    <details class="topico-personagem">
+                        <summary class="subtitulo">
+                            <img src="../recursos/imagens/arquetipos/lider.png" class="iconeImagem">
+                            <span>Líder</span>
+                            <br>
+                            <span class="arquetipo-tag">Objetivo & teimoso</span>
+                        </summary>
+                        <p>
+                            O líder é o personagem que possui um objetivo único, foco e determinação.
+                        </p>
+                        <p>
+                            Nada o deterá enquanto não tiver o que deseja na palma de sua mão. Sua resolução 
+                            e força de vontade é um grande combustível para avançar a narrativa. Não é necessariamente 
+                            uma pessoa que dá ordens ou comanda o grupo, mas certamente é o mais determinado a 
+                            seguir em frente a todo custo.
+                        </p>
+                        <p>
+                            Diferente do que entendemos por “líder”, esse personagem não é, necessariamente, a pessoa 
+                            mais capaz ou poderosa do grupo. O que o torna um Líder é justamente uma ideia fixa em 
+                            sua cabeça, um plano a ser executado.
+                        </p>
+                        <p>
+                            Talvez mais de um jogador tente assumir o papel de Líder do grupo. Isso pode 
+                            gerar algum conflito, principalmente se os líderes têm objetivos opostos. É aí que o 
+                            Mestre deve agir, incusive durante a criação de personagens, para que todos estejam alinhados na 
+                            mesma direção na narrativa, ou usando isso na sua história.
+                        </p>
+                        <span class="subtitulo-interno">Inspiração:</span>
+                        <p>
+                            <span class="marca-texto">Katniss Everdeen</span>, de Jogos Vorazes. Ela não começa como 
+                            líder política ou militar, mas sua 
+                            determinação em proteger a irmã e sobreviver acaba colocando-a no centro dos acontecimentos. 
+                            Frequentemente age a partir de um objetivo pessoal bastante definido e inspira os outros.
+                        </p>
+                        <p>
+                            <span class="textoNegrito">Outros:</span><br>
+                            - Gandalf (O Senhor dos Anéis);<br>
+                            - Forrest Gump e eu não retiro o que disse;<br>
+                            - Comandante Shepard (<span class="textoItalico">Mass Effect</span>);<br>
+                            - All Might (<span class="textoItalico">My Hero Academia</span>);<br>
+                            - Harry Potter, ele mesmo.
+                        </p>
+                        <button type="button" class="fechar-topico">Fechar tópico</button>
+                    </details>
+
+                    <details class="topico-personagem">
+                        <summary class="subtitulo">
+                            <img src="../recursos/imagens/arquetipos/rebelde.png" class="iconeImagem">
+                            <span>Rebelde</span>
+                            <br>
+                            <span class="arquetipo-tag">Revoltado & inconsequente</span>
+                        </summary>
+                        <p>
+                            O arquétipo do Rebelde é inconformado com as injustiças do sistema em que vive.
+                        </p>
+                        <p>
+                            É aquele personagem que levanta bandeiras no meio da multidão e grita a plenos 
+                            pulmões clamando por mudanças radicais.
+                        </p>
+                        <p>
+                            Conhece as regras “das ruas”, sendo capaz de se virar com o que tem e 
+                            praticamente não hesita na frente do perigo. Devido à segurança que tem 
+                            de si mesmo, tende a ser irresponsável, muitas vezes se tornando incapaz 
+                            de entrar de acordo com leis e regras em geral, exibindo comportamentos destrutivos 
+                            para si e o grupo.
+                        </p>
+                        <p>
+                            Age por impulso e, sempre que possível, questiona a ordem das coisas e o privilégio 
+                            dos poderosos. Adora desafiar figuras de autoridade, como policiais e a nobreza.
+                        </p>
+                        <span class="subtitulo-interno">Inspiração:</span>
+                        <p>
+                            <span class="marca-texto">Monkey D. Luffy</span>, de <span class="textoItalico">One Piece</span>. Luffy 
+                            desafia constantemente autoridades, governos e estruturas de poder. Apesar de não ser necessariamente 
+                            motivado por uma ideologia, sua recusa em aceitar que alguém possa determinar como os outros devem 
+                            viver é uma característica muito forte do arquétipo.
+                        </p>
+                        <p>
+                            <span class="textoNegrito">Outros:</span><br>
+                            - Robin Hood;<br>
+                            - Jack Sparrow (Piratas do Caribe);<br>
+                            - Eleven (<span class="textoItalico">Stranger Things</span>);<br>
+                            - Wandinha (A Família Addams \ Wandinha);<br>
+                            - Aloy (<span class="textoItalico">Horizon</span>).
+                        </p>
+                        <button type="button" class="fechar-topico">Fechar tópico</button>
+                    </details>
+
+                    <details class="topico-personagem">
+                        <summary class="subtitulo">
+                            <img src="../recursos/imagens/arquetipos/sedutor.png" class="iconeImagem">
+                            <span>Sedutor</span>
+                            <br>
+                            <span class="arquetipo-tag">Persuasivo & mimado</span>
+                        </summary>
+                        <p>
+                            Conhecido pela sua beleza ou uso persuasivo das palavras, o Sedutor vira o centro das atenções. 
+                            Dotado de um carisma irresistível, esse personagem conquista as pessoas para que realizem suas vontades.
+                        </p>
+                        <p>
+                            Ele tende a ser manipulador com amigos e inimigos, tornando-se alguém difícil de confiar quando 
+                            descobrem suas intenções. Por sempre conseguir o que deseja com facilidade, apresenta 
+                            características de uma criança mimada, podendo ficar enraivecido ou perder a 
+                            postura quando contrariado.
+                        </p>
+                        <p>
+                            Tem um talento natural para encontrar atalhos, usando sua persuasão para convencer pessoas 
+                            desatentas, e tende a se aproximar de quem for capaz de lhe proteger ou oferecer vantagens. Talvez 
+                            possa ser comprado.
+                        </p>
+                        <span class="subtitulo-interno">Inspiração:</span>
+                        <p>
+                            <span class="marca-texto">Cebolinha</span>, da Turma da Mônica. Ele está constantemente tentando 
+                            convencer Cascão e os outros a participarem de seus planos infalíveis, sendo muito criativo 
+                            para inventar desculpas, planos e estratégias para conseguir o que quer. É autoconfiante, facilmente
+                            irritável e consegue que os outros façam aquilo que ele quer através de conversa, persuasão 
+                            e manipulação.
+                        </p>
+                        <p>
+                            <span class="textoNegrito">Outros:</span><br>
+                            - Loki, o deus da trapaça da Marvel;<br>
+                            - Regina George (Meninas Malvadas);<br>
+                            - Aladdin;<br>
+                            - Loid Forger (<span class="textoItalico">Spy x Family</span>);<br>
+                            - Hanz (<span class="textoItalico">Frozen</span>).
+                        </p>
+                        <button type="button" class="fechar-topico">Fechar tópico</button>
+                    </details>
+
+                    <details class="topico-personagem">
+                        <summary class="subtitulo">
+                            <img src="../recursos/imagens/arquetipos/tolo.png" class="iconeImagem">
+                            <span>Tolo</span>
+                            <br>
+                            <span class="arquetipo-tag">Brincalhão & descuidado</span>
+                        </summary>
+                        <p>
+                            Se seu personagem de RPG é aquela pessoa que, diante dos conflitos apresentados ao 
+                            grupo, sem nenhuma preocupação no olhar, fala “relaxa, pessoal”, ele certamente se enquadra 
+                            no arquétipo do Tolo.
+                        </p>
+                        <p>
+                            O Tolo não se preocupa com nada em específico, nem com sua própria existência. Quase todo o 
+                            propósito dele na mesa está em ser um alívio cômico. Nem por isso imagine que seu papel 
+                            não é importante, pelo contrário, o humor pode e já salvou a vida de muita gente 
+                            mergulhada em tempos difíceis.
+                        </p>
+                        <p>
+                            Em compensação, ele pode ser brutalmente honesto, revelando informações e opiniões que geram 
+                            conflito dentro e fora do grupo. Se tem alguém que pode fazer a coisa errada na hora errada, 
+                            esse alguém é o Tolo.
+                        </p>
+                        <p>
+                            Mas é bem comum a coisa errada na hora errada ser justamente o que o grupo precisava.
+                        </p>
+                        <span class="subtitulo-interno">Inspiração:</span>
+                        <p>
+                            <span class="marca-texto">Mushu</span>, de Mulan. Ele representa o arquétipo do Tolo 
+                            por ser impulsivo, convencido e frequentemente agir sem pensar nas consequências. 
+                            Mesmo diante do perigo, mantém seu humor e otimismo, transformando situações tensas 
+                            em momentos cômicos. Suas trapalhadas podem complicar os planos, mas sua coragem 
+                            e lealdade acabam sendo essenciais para ajudar Mulan.
+                        </p>
+                        <p>
+                            <span class="textoNegrito">Outros:</span><br>
+                            - Drax (Guardiões da Galáxia);<br>
+                            - Saitama (M<span class="textoItalico">One-Punch Man</span>);<br>
+                            - Might Guy (Naruto);<br>
+                            - Phil Dunphy (<span class="textoItalico">Modern Family</span>);<br>
+                            - Fred e George Weasley (Harry Potter).
+                        </p>
+                        <button type="button" class="fechar-topico">Fechar tópico</button>
+                    </details>
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

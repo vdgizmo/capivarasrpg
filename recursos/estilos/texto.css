@@ -16,10 +16,10 @@ body p {
     font-weight: 600;
 }
 
-/* .subtitulo-interno {
-    margin-left: 20px;
+.subtitulo-interno {
+    margin-left: 10px;
     margin-right: 20px;
-} */
+}
 
 .titulo-central {
     display: block;
@@ -34,7 +34,7 @@ body p {
 }
 
 .subtitulo-interno::before {
-    content: '⚔️'; /* ✨, 🛡️, ⚔️, 📜, ⭐ */
+    content: '✨'; /* ✨, 🛡️, ⚔️, 📜, ⭐ */
     font-size: 0.95em;
     display: inline-block;
     animation: balanco 2s infinite ease-in-out; 
@@ -160,4 +160,10 @@ body p {
 .citacaoTexto {
     font-family: 'Finger Paint', sans-serif;
     font-size: 0.9em;
+}
+
+.arquetipo-tag {
+    font-size: 0.8em !important;
+    color: #066674 !important;
+    font-family: 'Fredoka', sans-serif !important;
 }
