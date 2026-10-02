@@ -27,17 +27,42 @@
     flex-shrink: 0;
 }
 
-.imagem-cabecalho, .imagem-cabecalho-interno {
+.imagem-cabecalho-interno {
     width: 100%;
     height: auto;
     display: block;
     margin-bottom: -38px;
+    
     -webkit-mask-image: linear-gradient(
         to bottom,
         black 0%,
         black 50%,
         transparent 100%
     );
+    mask-image: linear-gradient(
+        to bottom,
+        black 0%,
+        black 50%,
+        transparent 100%
+    );
+}
+
+.imagem-cabecalho {
+    width: calc(100% + 28px);
+    height: auto;
+    display: block;
+    margin-left: -14px;
+    margin-right: -14px;
+    margin-top: -14px;
+    margin-bottom: -38px;
+
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        black 0%,
+        black 50%,
+        transparent 100%
+    );
+
     mask-image: linear-gradient(
         to bottom,
         black 0%,
@@ -54,7 +79,7 @@
 }
 
 .imagem-cabecalho {
-    border-radius: 12px 12px 0 0;
+    border-radius: 15px 15px 0 0;
 }
 
 .icone-menu {
@@ -111,8 +136,8 @@
 
 .videoYoutube {
     position: relative;
-    width: 100%;
-    max-width: 900px;
+    width: 95%;
+    /* max-width: 900px; */
     aspect-ratio: 16 / 9;
     margin: 2rem auto;
     overflow: hidden;
