@@ -317,3 +317,28 @@ tr:nth-child(even) {
     border-radius: 50%;
     flex-shrink: 0;
 }
+
+#voltarTopo {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity .25s, transform .25s, visibility .25s, background .2s;
+    z-index: 999;
+}
+
+#voltarTopo:hover {
+    background: rgba(0, 0, 0, 0.65);
+    transform: translateY(-2px);
+}
